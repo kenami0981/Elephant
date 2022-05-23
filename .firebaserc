@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "elephants1": {
+      "hosting": {
+        "Elephants": [
+          "elephants1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "elephants1"
+  }
+}
