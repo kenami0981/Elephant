@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
 import { HomePage } from './home.page';
+import { NavComponentModule } from '@navigation';
+import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/hero.component-module';
 
-@NgModule({ imports: [CommonModule, 
+@NgModule({ imports: [CommonModule, NavComponentModule, HeroComponentModule,
       RouterModule.forChild([
         {
           path: '',
           component: HomePage,
         }
-      ]),
-  NavComponentModule,
-  FirebaseNavigationServiceModule
-],
+      ])],
   	declarations: [HomePage],
   	providers: [],
   	exports: [] })
