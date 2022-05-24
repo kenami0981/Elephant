@@ -1,5 +1,24 @@
+<div>
+  <div class="card me-5">
+    <img
+    src="https://s3-alpha-sig.figma.com/img/98cf/944a/401ee6dd7cb8b32f35703f88f482980a?Expires=1654473600&Signature=dtG462bjHqf4nUhhAPG04MlITaNFTVYaEEQuovfQ-tunj7Nl6wjPHYXIquZnKTwrCjq9WoU2QbxuGQ5vPbqx6t9zizDV-yDgoj0yB8S9-Ses80KsGLHF4JL21RsaQMkDIk61Rh25x8i2yulbTuEo4Yua-U55nOj3uGig2p4uJwLbMWF6Us8bkAZJPI98YmStMmbYbA9EuX0wWU3SvyJsghiqU5guK2h5m7vl7eIy~pe3yXXiLhqaTNfqLfuk4dPZacO4cS0d6hPp6MpRSNXJLhywNc7Iz497Uqj8OTcMdujGDm8O6fdiTUG8RWSKRZf-22O5VLs6taZosZ9P08G6XA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="contact"
+      class="card-img"
+      style="width: 100vw; height: 348px; object-fit: cover"
+      alt="contact"
+      data-bgposition="center center"
+    />
+  </div>
+    <div 
+    class="card-img-overlay text-uppercase text-white d-flex flex-column justify-content-center align-items-left me-5">
+    <div class="bottom-left">CONTACT US</div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
 <form [formGroup]="contact" (ngSubmit)="onContactSubmited(contact)">
     <input type="text" formControlName="Name" placeholder="Name">
     <input type="text" formControlName="Email" placeholder="Email">
     <input type="text" formControlName="Message" placeholder="Message">
-    <input type="submit" value="Submit"></form>
+    <button (click)="onContactSubmited(contact)" type="button" class="btn btn-primary me-md-2 ">SEND MESSAGE</button> 

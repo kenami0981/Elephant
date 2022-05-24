@@ -15,7 +15,7 @@ import { ContactPage } from './contact.page';
   NavComponentModule,
   FirebaseNavigationServiceModule,
   FormComponentModule,
-  FirebaseContactServiceModule
+  FirebaseContactServiceModule,
 ],
   	declarations: [ContactPage],
   	providers: [],

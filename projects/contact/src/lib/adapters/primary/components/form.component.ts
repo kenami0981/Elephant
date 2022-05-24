@@ -19,5 +19,6 @@ export class FormComponent {
 
   onContactSubmited(contact: FormGroup): void {
     this._addsContactDto.add(contact.getRawValue());  
+    contact.reset();
   }
 }
