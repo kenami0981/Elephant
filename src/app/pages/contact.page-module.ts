@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
 import { FirebaseContactServiceModule, FormComponentModule } from '@contact';
 import { ContactPage } from './contact.page';
+import { PromotionComponentModule } from '@promo';
 
 @NgModule({ imports: [CommonModule, 
       RouterModule.forChild([
@@ -15,7 +16,8 @@ import { ContactPage } from './contact.page';
   NavComponentModule,
   FirebaseNavigationServiceModule,
   FormComponentModule,
-  FirebaseContactServiceModule
+  FirebaseContactServiceModule,
+  PromotionComponentModule
 ],
   	declarations: [ContactPage],
   	providers: [],
