@@ -6,16 +6,25 @@ import { NavComponentModule } from '@navigation';
 import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/hero.component-module';
 import { ProductsComponentModule } from 'projects/products/src/lib/adapters/primary/ui/products.component-module';
 import { BenefitComponentModule } from '@benefit';
+import { PromotionComponentModule } from '@promo';
 
-@NgModule({ imports: [CommonModule, NavComponentModule, HeroComponentModule, ProductsComponentModule, BenefitComponentModule,
-      RouterModule.forChild([
-        {
-          path: '',
-          component: HomePage,
-        }
-      ])],
-  	declarations: [HomePage],
-  	providers: [],
-  	exports: [] })
-export class HomePageModule {
-}
+@NgModule({
+  imports: [
+    CommonModule,
+    NavComponentModule,
+    HeroComponentModule,
+    ProductsComponentModule,
+    BenefitComponentModule,
+    PromotionComponentModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: HomePage,
+      },
+    ]),
+  ],
+  declarations: [HomePage],
+  providers: [],
+  exports: [],
+})
+export class HomePageModule {}
