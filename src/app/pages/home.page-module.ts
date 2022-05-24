@@ -4,8 +4,9 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import { NavComponentModule } from '@navigation';
 import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/hero.component-module';
+import { ProductsComponentModule } from 'projects/products/src/lib/adapters/primary/ui/products.component-module';
 
-@NgModule({ imports: [CommonModule, NavComponentModule, HeroComponentModule,
+@NgModule({ imports: [CommonModule, NavComponentModule, HeroComponentModule, ProductsComponentModule,
       RouterModule.forChild([
         {
           path: '',
