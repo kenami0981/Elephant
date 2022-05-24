@@ -22,7 +22,7 @@ import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/h
     AngularFireModule.initializeApp(environment.firebasestoreConfig),
     NavComponentModule,
     FirebaseNavigationServiceModule,
-    HeroComponentModule
+    HeroComponentModule,
     
   ],
   providers: [],
