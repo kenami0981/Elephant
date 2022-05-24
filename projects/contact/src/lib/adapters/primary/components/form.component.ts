@@ -1,4 +1,7 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+import { ChangeDetectionStrategy, Component, Inject, ViewEncapsulation } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { ADDS_CONTACT_DTO, AddsContactDtoPort } from '../../../application/ports/secondary/dto/adds-contact.dto-port';
 
 @Component({ 
     selector: 'lib-form', 
@@ -6,4 +9,15 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
     encapsulation: ViewEncapsulation.None, 
     changeDetection: ChangeDetectionStrategy.OnPush })
 export class FormComponent {
+  readonly contact: FormGroup = new FormGroup({
+      name: new FormControl(), 
+      email: new FormControl(), 
+      message: new FormControl()});
+
+  constructor(@Inject(ADDS_CONTACT_DTO) private _addsContactDto: AddsContactDtoPort) {
+  }
+
+  onContactSubmited(contact: FormGroup): void {
+    this._addsContactDto.add(contact.getRawValue());  
+  }
 }
