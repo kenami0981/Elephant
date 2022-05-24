@@ -1,1 +1,11 @@
-<ul><li *ngFor="let item of navigation$ | async">{{ item | json }}</li></ul>
+
+<nav class="navbar bg-light navbar-light navbar-expand-lg">
+    <h2 class="navbar-brand">NorthStar</h2>
+    <div class="collapse navbar-collapse" id="mainmenu">
+        <ul class="navbar-nav mr-auto">
+            <li *ngFor="let item of navigation$ | async" class="nav-item">
+                <a class="nav-link mb-1" [href]="item.href"> {{item.name}} </a>
+            </li>
+        </ul>
+    </div>
+</nav>
