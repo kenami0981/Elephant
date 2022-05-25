@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { NavComponentModule } from '@navigation';
 import { BenefitComponentModule } from '@benefit';
 import { PromotionComponentModule } from '@promo';
-import { BestSellingComponentModule, FirebaseBestSellServiceModule } from '@selling';
+import { BestSellingComponentModule, FirebaseBestSellHeadingServiceModule, FirebaseBestSellServiceModule } from '@selling';
 import { HomePage } from './home.page';
 import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/hero.component-module';
 import { ProductsComponentModule } from 'projects/products/src/lib/adapters/primary/ui/products.component-module';
@@ -27,6 +27,7 @@ import { FooterComponentModule } from 'projects/footer/src';
       },
     ]),
     FirebaseBestSellServiceModule,
+    FirebaseBestSellHeadingServiceModule
   
   ],
   declarations: [HomePage],
