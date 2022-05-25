@@ -17,8 +17,10 @@ export class FormComponent {
   constructor(@Inject(ADDS_CONTACT_DTO) private _addsContactDto: AddsContactDtoPort) {
   }
 
-  onContactSubmited(contact: FormGroup): void {
-    this._addsContactDto.add(contact.getRawValue());  
-    contact.reset();
-  }
+  
+
+onContactSubmited(contact: FormGroup): void {
+  this._addsContactDto.add(contact.getRawValue());
+  contact.reset();
+}
 }
