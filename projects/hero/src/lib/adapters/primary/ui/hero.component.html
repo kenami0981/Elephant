@@ -1,6 +1,6 @@
-<div class="card me-5">
+<div class="card me-5" *ngIf="text$ | async as text">
   <img
-    src="https://s3-alpha-sig.figma.com/img/c844/b7d7/532c968ff97763ae0f3a23e981f156a2?Expires=1654473600&Signature=WFDoCONhkCq1Rcgc3zHROZCuEIpstFRD1rSp8i5HAkwG64Cnvg5DiOiLuCh4st7hPUgU27BtLyFDZoMVEkFZtKAjiYb8tZwJOzj3HzCTWU5DwkbNOpJAsS93sc2MYRXPNBmNi8CAMkBnv70ubLZ7vzwc-yQPjKMnaG~E0YYGfZ48d9FDHlKOySF~b7beZxLtntCuKxm2PWUkYtlROC3j8czRo-NkyaLSb3CCHZ~sQvfkEy7e~N7qFXaU~rPusVYJFN9y-LRG0qUWYt2sXViMX6lgtcTNUQj6AWyPDUSossdthLZfKJR8dOOjwOOv7ePSUWfdwJbgiKBBwQpwg~lEgQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+    [src]="text.imageUrl"
     class="card-img"
     style="width: 100vw; height: 648px; object-fit: cover"
     alt="fashionable girl"
@@ -10,13 +10,13 @@
   <div
     class="card-img-overlay text-uppercase text-white d-flex flex-column justify-content-center align-items-end me-5"
   >
-    <h3 class="card-title fw-bolder">stylist picks beat</h3>
-    <h3 class="card-title fw-bolder">the heat</h3>
+    <h3 class="card-title fw-bolder">{{text.textTop}}</h3>
+    <h3 class="card-title fw-bolder">{{text.textBottom}}</h3>
     <a
       class="card-text mt-3 text-white text-decoration-none fs-4 border border-3 px-3 py-1"
       type="button"
     >
-      shop now
+      {{text.buttonText}}
     </a>
   </div>
 </div>

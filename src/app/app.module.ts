@@ -9,6 +9,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
 import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/hero.component-module';
+import { FirebaseHeroTextsServiceModule } from 'projects/hero/src/lib/adapters/secondary/infrastructure/firebase-hero-texts.service-module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/h
     NavComponentModule,
     FirebaseNavigationServiceModule,
     HeroComponentModule,
+    FirebaseHeroTextsServiceModule
     
   ],
   providers: [],
