@@ -1,10 +1,6 @@
-<!-- <ul>
-  <li *ngFor="let item of products$ | async"></li>
-</ul> -->
-
-<section class="container text-center">
-  <div class="row py-4">
-    <h1 class="few-bold">Discover <span>new</span> arrivals</h1>
+<section class="container text-center py-3">
+  <div class="row py-5" *ngIf="product$ | async as product">
+    <h1 class="fw-bold">{{product.title}} <span class="text-uppercase">{{product.middleText}}</span>{{product.title2}}</h1>
     <h4>Recently added shirts!</h4>
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
