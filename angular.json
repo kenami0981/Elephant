@@ -23,10 +23,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
-              
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -164,6 +161,41 @@
               "tsConfig": "projects/promo/tsconfig.lib.prod.json"
             },
             "development": { "tsConfig": "projects/promo/tsconfig.lib.json" }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "founders": {
+      "projectType": "library",
+      "root": "projects/founders",
+      "sourceRoot": "projects/founders/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/founders"],
+          "options": {
+            "jestConfig": "projects/founders/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "selling": {
+      "projectType": "library",
+      "root": "projects/selling",
+      "sourceRoot": "projects/selling/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": { "project": "projects/selling/ng-package.json" },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/selling/tsconfig.lib.prod.json"
+            },
+            "development": { "tsConfig": "projects/selling/tsconfig.lib.json" }
           },
           "defaultConfiguration": "production"
         }
