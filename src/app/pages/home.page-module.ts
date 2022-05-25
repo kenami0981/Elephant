@@ -7,6 +7,7 @@ import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/h
 import { ProductsComponentModule } from 'projects/products/src/lib/adapters/primary/ui/products.component-module';
 import { BenefitComponentModule } from '@benefit';
 import { PromotionComponentModule } from '@promo';
+import { BestSellingComponentModule } from '@selling';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { PromotionComponentModule } from '@promo';
     ProductsComponentModule,
     BenefitComponentModule,
     PromotionComponentModule,
+    BestSellingComponentModule,
     RouterModule.forChild([
       {
         path: '',
