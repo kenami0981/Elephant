@@ -8,6 +8,7 @@ import { ProductsComponentModule } from 'projects/products/src/lib/adapters/prim
 import { BenefitComponentModule } from '@benefit';
 import { PromotionComponentModule } from '@promo';
 import { BestSellingComponentModule } from '@selling';
+import { FooterComponentModule } from '@footer';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { BestSellingComponentModule } from '@selling';
     BenefitComponentModule,
     PromotionComponentModule,
     BestSellingComponentModule,
+    FooterComponentModule,
     RouterModule.forChild([
       {
         path: '',
