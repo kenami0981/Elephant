@@ -24,7 +24,7 @@ import { FirebaseProductsServiceModule } from 'projects/products/src/lib/adapter
     NavComponentModule,
     FirebaseNavigationServiceModule,
     HeroComponentModule,
-    FirebaseProductsServiceModule
+    FirebaseProductsServiceModule,
     
   ],
   providers: [],
