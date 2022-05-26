@@ -200,6 +200,22 @@
           "defaultConfiguration": "production"
         }
       }
+    },
+    "testimonials": {
+      "projectType": "library",
+      "root": "projects/testimonials",
+      "sourceRoot": "projects/testimonials/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/testimonials"],
+          "options": {
+            "jestConfig": "projects/testimonials/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "defaultProject": "Elephants"
