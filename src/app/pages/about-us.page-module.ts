@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
-import { FoundersComponentModule } from '../../../projects/founders/src'
 import { AboutUsPage } from './about-us.page';
+import { FoundersComponentModule } from '../../../projects/founders/src';
 
 @NgModule({ imports: [CommonModule, 
       RouterModule.forChild([
@@ -14,7 +14,7 @@ import { AboutUsPage } from './about-us.page';
       ]),
   NavComponentModule,
   FirebaseNavigationServiceModule,
-  FoundersComponentModule
+  FoundersComponentModule,
 ],
   	declarations: [AboutUsPage],
   	providers: [],
