@@ -12,6 +12,7 @@ import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/h
 import { FirebaseProductsServiceModule } from 'projects/products/src/lib/adapters/secondary/infrastructure/firebase-products.service-module';
 import { FirebaseHeroTextsServiceModule } from 'projects/hero/src/lib/adapters/secondary/infrastructure/firebase-hero-texts.service-module';
 import { FirebaseBenefitsServiceModule } from '@benefit';
+import { FirebaseTestimonialsServiceModule } from '@testimonials';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { FirebaseBenefitsServiceModule } from '@benefit';
     HeroComponentModule,
     FirebaseProductsServiceModule,
     FirebaseHeroTextsServiceModule,
-    FirebaseBenefitsServiceModule
+    FirebaseBenefitsServiceModule,
+    FirebaseTestimonialsServiceModule
 
     
   ],
