@@ -13,6 +13,7 @@ import { FirebaseProductsServiceModule } from 'projects/products/src/lib/adapter
 import { FirebaseHeroTextsServiceModule } from 'projects/hero/src/lib/adapters/secondary/infrastructure/firebase-hero-texts.service-module';
 import { FirebaseBenefitsServiceModule } from '@benefit';
 import { FirebasePromotionsServiceModule } from '@promo';
+import { FirebaseTestimonialsServiceModule } from '@testimonials';
 
 
 @NgModule({
@@ -32,6 +33,8 @@ import { FirebasePromotionsServiceModule } from '@promo';
     FirebaseHeroTextsServiceModule,
     FirebaseBenefitsServiceModule,
     FirebasePromotionsServiceModule
+    FirebaseTestimonialsServiceModule
+
 
     
   ],
