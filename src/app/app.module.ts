@@ -32,7 +32,7 @@ import { FirebaseTestimonialsServiceModule } from '@testimonials';
     FirebaseProductsServiceModule,
     FirebaseHeroTextsServiceModule,
     FirebaseBenefitsServiceModule,
-    FirebasePromotionsServiceModule
+    FirebasePromotionsServiceModule,
     FirebaseTestimonialsServiceModule
 
 
