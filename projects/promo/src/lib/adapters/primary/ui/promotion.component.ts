@@ -15,4 +15,3 @@ export class PromotionComponent {
   constructor(@Inject(GETS_ALL_PROMOTION_DTO) private _getsAllPromotionDto: GetsAllPromotionDtoPort) {
   }
 }
-

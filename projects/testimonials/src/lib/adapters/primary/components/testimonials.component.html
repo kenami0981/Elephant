@@ -1,8 +1,8 @@
 <section
-  class="container py-5 d-flex flex-column justify-content-center align-items-center p-0 m-0"
+  class="container py-5 d-flex flex-column justify-content-center align-items-center"
 >
   <h1 *ngIf="testimonial$ | async as testimonial"
-    class="pb-5 fw-bold"
+    class="pb-5 fw-bold py-5"
     style="color: #1d1d1d; font-size: 36px; font-family: 'Arimo'"
   >
     {{testimonial.title}}
@@ -10,11 +10,11 @@
 
   <div *ngFor="let testimonial of testimonials$ | async" class="card mb-3 border-0 pb-5" style="max-width: 800px">
     <div class="row g-0">
-      <div class="col-md-4 me-3">
+      <div class="col-md-4 me-2">
         <img
           [src]="testimonial.imageUrl"
           class="img-fluid rounded-circle"
-          style="width: 210px; height: 210px"
+          style="width: 210px; height: 210px; object-fit: cover;"
           [alt]="testimonial.alt"
         />
       </div>
