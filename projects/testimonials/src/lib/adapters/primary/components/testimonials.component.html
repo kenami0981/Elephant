@@ -1,78 +1,33 @@
 <section
-  class="container py-5 d-flex flex-column justify-content-center align-items-center p-0 m-0"
+  class="container py-5 d-flex flex-column justify-content-center align-items-center"
 >
-  <h1
-    class="pb-5 fw-bold"
+  <h1 *ngIf="testimonial$ | async as testimonial"
+    class="pb-5 fw-bold py-5"
     style="color: #1d1d1d; font-size: 36px; font-family: 'Arimo'"
   >
-    Testimonials
+    {{testimonial.title}}
   </h1>
 
-  <div class="card mb-3 border-0 pb-5" style="max-width: 800px">
+  <div *ngFor="let testimonial of testimonials$ | async" class="card mb-3 border-0 pb-5" style="max-width: 800px">
     <div class="row g-0">
-      <div class="col-md-4 me-3">
+      <div class="col-md-4 me-2">
         <img
-          src="https://s3-alpha-sig.figma.com/img/4c01/dbd3/4faae81b60a4b022bf488aa86eb932ad?Expires=1654473600&Signature=cEv07gXtaaziCkMjnxngu8-LnqUIhyB6swm~hvZzoSzhVkDR33fEv61H1u8DAm87k-Yq~VBP9~5HPPpSe~y3qiir6kz7r-uKPsFwtMfGT9LoQvr~jv0BAse-Wkais88fq3fSmxGZ-kRvQQ4uRNNVurbJ56DSg59ZPU~ROCHl9x3ibnfVkQheM5nDfnhP6ijCkoa9hjHiQovMNX~OQi-0qvNpVpBjmTvZplQ6pDiOTm7iiNisnUo~K~JuWEA4FalCLmaqQiDOz05cmFvU8GXNj6pha5vAPzkWrq0XvA~aWatfA2O-6jjmwnk0vZDromvJ8S7K29e0b2K6SwQiQkS~jA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+          [src]="testimonial.imageUrl"
           class="img-fluid rounded-circle"
-          style="width: 210px; height: 210px"
-          alt="..."
+          style="width: 210px; height: 210px; object-fit: cover;"
+          [alt]="testimonial.alt"
         />
       </div>
       <div class="col-md-6">
         <div class="card-body">
           <h5 class="card-title">"</h5>
           <p class="card-text fw-bold" style="color: #555555">
-            Once we ordered some accessories items and we got the products
-            delivered in our doorstep, the customer support was super helpful
-            and they answered all my queries.
+            {{testimonial.text}}
           </p>
-          <p class="card-text fw-bold">Stacy</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card mb-3 border-0 pb-5" style="max-width: 800px">
-    <div class="row g-0">
-      <div class="col-md-4 me-3">
-        <img
-          src="https://s3-alpha-sig.figma.com/img/bcd9/5fc1/0f4e4d609720e04182cebac910b663c3?Expires=1654473600&Signature=ILtwN65iyYjRc5sDnSt-itHC8HrDaz4xw3iz8zhvLU4cg~lxyZ2uGp-0BpCUaQR2KgnGrqb5~9hFlFa03MPla7NXfgM5MAL-rsKrhy71ReJABgDxIEo-QreUf911BK~dCL3rCbrwZKGJb-JNd6VTrgeVO0D3S8VlxPMATC1nJFpHvYrDrV2CGxmZ1H0DDG5F3T3JTon-m2BVl-pBotlIpe9equV21gMBCaUdD~zWwu7ycAElWXhM6JVp~uliPMKQCJ~H82fGf-97spbmz5J97VeboBT-zGMbSphKSyicCINOT91WZcaYtjKdGyZCLrFY8zJ15SUqylOdAhZuHF4Uew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-          class="img-fluid rounded-circle"
-          style="width: 210px; height: 210px"
-          alt="..."
-        />
-      </div>
-      <div class="col-md-6">
-        <div class="card-body">
-          <h5 class="card-title">"</h5>
-          <p class="card-text fw-bold" style="color: #555555">
-            I ordered 5 shirts from them and received them in no time. The
-            customer support was awesome!
-          </p>
-          <p class="card-text fw-bold">Tiffany</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card mb-3 border-0 pb-5" style="max-width: 800px">
-    <div class="row g-0">
-      <div class="col-md-4 me-3">
-        <img
-          src="https://s3-alpha-sig.figma.com/img/4c1f/c888/6d9460a3c0e97ae61b98d565d4a4e27c?Expires=1654473600&Signature=EIzgNPsmOCkcZONuFzfzToUow8el8hi1jZx~fO2gxHFs-T0WZOLbusBVOIcueXvc4VZ0M1-xmGtB3~3DSkZPMdYDjodBxX1o-JIWFIL8A9-8Nwjo2nd0rRpbDMpWi4tshhPX9oewSuoBrNTBmwbiRXJKoXbH94K2~vbZJb4hOr6RuKp7~0qBSqwpOzrZ6EF9yn2R-DkUJ3cZD7pV-8shOHGcsK7q4cNiATXuTMtu5NEXlyj2WC7Wsr5oXk~MW1pgsE4NsBa54CdwE4O9boKuWvIgziaCWlacSefQ3-DHt5I9i3-3dRmSsBRF1PiyIo~idCerA0TxWUV1xBC9jRWeAQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-          class="img-fluid rounded-circle"
-          style="width: 210px; height: 210px"
-          alt="..."
-        />
-      </div>
-      <div class="col-md-6">
-        <div class="card-body">
-          <h5 class="card-title">"</h5>
-          <p class="card-text fw-bold" style="color: #555555">
-            I got a wrong shirt so I contacted them and they happily offered me
-            a refund. I will surely shop from them again.
-          </p>
-          <p class="card-text fw-bold">James</p>
+          <p class="card-text fw-bold">{{testimonial.name}}</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+

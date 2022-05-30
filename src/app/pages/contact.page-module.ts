@@ -5,6 +5,7 @@ import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation
 import { FirebaseContactServiceModule, FormComponentModule } from '@contact';
 import { PromotionComponentModule } from '@promo';
 import { ContactPage } from './contact.page';
+import { FooterComponentModule } from '@footer';
 
 @NgModule({ imports: [CommonModule, 
       RouterModule.forChild([
@@ -18,6 +19,7 @@ import { ContactPage } from './contact.page';
   FormComponentModule,
   FirebaseContactServiceModule,
   PromotionComponentModule,
+  FooterComponentModule,
 ],
   	declarations: [ContactPage],
   	providers: [],
