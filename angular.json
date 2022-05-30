@@ -217,6 +217,7 @@
         }
       }
     },
+
     "products": {
       "projectType": "library",
       "root": "projects/products",
