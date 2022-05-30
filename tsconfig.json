@@ -26,7 +26,8 @@
       "@founders": ["projects/founders/src/index.ts"],
       "@selling": ["projects/selling/src/index.ts"],
       "@footer": ["projects/footer/src/index.ts"],
-      "@testimonials": ["projects/testimonials/src/index.ts"]
+      "@testimonials": ["projects/testimonials/src/index.ts"],
+      "@products": ["projects/products/src/index.ts"],
     }
   },
   "angularCompilerOptions": {
