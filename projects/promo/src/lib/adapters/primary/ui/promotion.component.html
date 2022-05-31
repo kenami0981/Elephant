@@ -1,12 +1,21 @@
 <section class="py-5 container">
-<div class="row d-flex justify-content-center align-item-center">
+  <div class="row d-flex justify-content-center align-item-center">
     <div class="col-sm-6" *ngFor="let promotion of promotions$ | async">
       <div class="card text-center">
-        <div class="card-body p-5" style="background-color:black; color: white;">
-          <h3 class="card-title text-uppercase mt-5 mb-4">{{promotion.title}}</h3>
-          <p class="card-text">{{promotion.text1}}</p>
-          <p class="card-text">{{promotion.text2}}</p>
-          <a href="#" class="btn bg-light text-primary text-uppercase px-4 py-2 mt-3 mb-5">{{promotion.buttonText}}</a>
+        <div
+          class="card-body p-5"
+          style="background-color: black; color: white"
+        >
+          <h3 class="card-title text-uppercase mt-5 mb-4">
+            {{ promotion.title }}
+          </h3>
+          <p class="card-text">{{ promotion.text1 }}</p>
+          <p class="card-text">{{ promotion.text2 }}</p>
+          <a
+            href="allProducts"
+            class="btn bg-light text-primary text-uppercase px-4 py-2 mt-3 mb-5"
+            >{{ promotion.buttonText }}</a
+          >
         </div>
       </div>
     </div>
