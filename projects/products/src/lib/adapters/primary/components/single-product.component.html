@@ -3,21 +3,21 @@
     <div class="row">
       <div class="col">
         <img
-          src="https://s3-alpha-sig.figma.com/img/f11a/eb01/f7ec4917af1331aff8a59bc5c547c38d?Expires=1654473600&Signature=XMJVaLFvxs7vGi70Ye5W-O1Srzvdh3r4ry1gIMfQBlMqp6OlQWnyRQd3KHvySo2bmfssN7UpzjlEizkFIQ452x7wufbpWoycHIw6eaJU-5l2tJeHD26UIYUjw3k6Ltr3M4TvtqgIJNCBRb3RQSHw5o-mm87r8ks072MdcRqY~2cqE8~jGb5wtEPPcSMlgMhyxx0QGzXN4k0BseduyzKZpSH1-aWSF63b2KgX08bb1BANRue7evR-j5oX9uKDynqHvL431RH9xgA~~rfjTDW2vS~mYfY2hAIkGRaCrOWeeAZ-U4oEqhAWlpRRDxJi1QDfX~ataTdfDMfNGODntYCJ2w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+          [src]="(product$ | async)?.imageUrl"
           class="rounded-start"
           style="width: 550px; height: 685px"
-          alt="..."
+          [alt]="(product$ | async)?.alt"
         />
       </div>
       <div class="col">
         <div class="card-body" style="max-width: 500px">
           <p class="text-uppercase fs-6">
-            home / shop / women / <span class="fw-bold">shop</span>
+            home / shop / {{(product$ | async)?.sex}} / <span class="fw-bold">shop</span>
           </p>
-          <h3 class="card-title fw-bold">Plain White Shirt</h3>
+          <h3 class="card-title fw-bold">{{(product$ | async)?.name}}</h3>
           <div class="d-flex">
             <p class="me-3 text-muted text-decoration-line-through">$69.00</p>
-            <p class="text-primary">$59.00</p>
+            <p class="text-primary">{{(product$ | async)?.currency}}{{(product$ | async)?.price}}</p>
           </div>
           <p class="card-text">
             A classic t-shirt never goes out of style. This is our most premium
@@ -48,7 +48,7 @@
           </button>
           <div class="py-3">
             <p class="fw-bold">
-              Category: <span class="fw-normal">Women, Polo, Casual</span>
+              Category: <span class="fw-normal">{{(product$ | async)?.sex}}, Polo, Casual</span>
             </p>
             <p class="fw-bold">
               Tags: <span class="fw-normal">Modern, Deign, cotton</span>

@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { GetsAllProductDtoPort } from '../../../application/ports/secondary/gets-all-product.dto-port';
-import { ProductDTO } from '../../../application/ports/secondary/product.dto';
+import { Observable, of, throwError } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
 import { filterByCriterion } from '@lowgular/shared';
+import { GetsAllProductDtoPort } from '../../../application/ports/secondary/gets-all-product.dto-port';
 import { GetsOneProductDtoPort } from '../../../application/ports/secondary/gets-one-product.dto-port';
+import { ProductDTO } from '../../../application/ports/secondary/product.dto';
 
 @Injectable()
 export class FirebaseProductsService
@@ -20,9 +20,22 @@ export class FirebaseProductsService
       .pipe(map((data: ProductDTO[]) => filterByCriterion(data, criterion)));
   }
 
+  // getOne(id: string): Observable<ProductDTO> {
+  //   return this._client
+  //     .doc<ProductDTO>('product-heading/' + id)
+  //     .valueChanges({ idField: 'id' }) as Observable<ProductDTO>;
+  // }
+
   getOne(id: string): Observable<ProductDTO> {
     return this._client
-      .doc<ProductDTO>('product-heading/' + id)
-      .valueChanges({ idField: 'id' }) as Observable<ProductDTO>;
+      .doc<ProductDTO>('product-list/' + id)
+      .valueChanges({ idField: 'id' })
+      .pipe(
+        switchMap((item) =>
+          item
+            ? of(item)
+            : throwError(new Error('Item does not exist in firebase'))
+        )
+      );
   }
 }

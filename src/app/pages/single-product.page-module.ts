@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
-import { SingleProductComponentModule } from '@products';
+import { FirebaseProductsServiceModule, SingleProductComponentModule } from '@products';
 import { SingleProductPage } from './single-product.page';
 import { FooterComponentModule } from '@footer';
 
@@ -11,7 +11,7 @@ import { FooterComponentModule } from '@footer';
     CommonModule,
     RouterModule.forChild([
       {
-        path: '',
+        path: ':productId',
         component: SingleProductPage,
       },
     ]),
@@ -21,6 +21,7 @@ import { FooterComponentModule } from '@footer';
     NavComponentModule,
     FooterComponentModule,
     SingleProductComponentModule,
+    FirebaseProductsServiceModule
   ],
   declarations: [SingleProductPage],
   providers: [],
