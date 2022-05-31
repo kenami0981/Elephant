@@ -4,6 +4,7 @@ import { HomePageModule } from './pages/home.page-module';
 import { ContactPageModule } from './pages/contact.page-module';
 import { AboutUsPageModule } from './pages/about-us.page-module';
 import { SingleProductPageModule } from './pages/single-product.page-module';
+import { AllProductsPageModule } from './pages/all-products.page-module';
 
 const routes: Routes = [{ 
         path: 'home', 
@@ -20,6 +21,10 @@ const routes: Routes = [{
   { 
         path: 'product', 
         loadChildren: () => SingleProductPageModule
+      },
+  { 
+        path: 'allProducts', 
+        loadChildren: () => AllProductsPageModule
       }
 ];
 
