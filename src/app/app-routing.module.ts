@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageModule } from './pages/home.page-module';
 import { ContactPageModule } from './pages/contact.page-module';
 import { AboutUsPageModule } from './pages/about-us.page-module';
+import { SingleProductPageModule } from './pages/single-product.page-module';
 
 const routes: Routes = [{ 
         path: 'home', 
@@ -15,6 +16,10 @@ const routes: Routes = [{
   { 
         path: 'about', 
         loadChildren: () => AboutUsPageModule
+      },
+  { 
+        path: 'product', 
+        loadChildren: () => SingleProductPageModule
       }
 ];
 
