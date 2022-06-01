@@ -12,8 +12,8 @@
           <p class="card-text">{{ promotion.text1 }}</p>
           <p class="card-text">{{ promotion.text2 }}</p>
           <a
-            href="allProducts"
-            class="btn bg-light text-primary text-uppercase px-4 py-2 mt-3 mb-5"
+          [routerLink]="['/allProducts']" routerLinkActive="router-link-active" 
+          class="btn bg-light text-primary text-uppercase px-4 py-2 mt-3 mb-5"
             >{{ promotion.buttonText }}</a
           >
         </div>
