@@ -14,6 +14,7 @@ import { FirebaseHeroTextsServiceModule } from 'projects/hero/src/lib/adapters/s
 import { FirebaseBenefitsServiceModule } from '@benefit';
 import { FirebasePromotionsServiceModule } from '@promo';
 import { FirebaseTestimonialsServiceModule } from '@testimonials';
+import { FirebaseFooterFormServiceModule, FirebaseFooterIconsServiceModule, FirebaseFooterTextsServiceModule } from '@footer';
 
 
 @NgModule({
@@ -34,6 +35,9 @@ import { FirebaseTestimonialsServiceModule } from '@testimonials';
     FirebaseBenefitsServiceModule,
     FirebasePromotionsServiceModule,
     FirebaseTestimonialsServiceModule,
+    FirebaseFooterTextsServiceModule,
+    FirebaseFooterIconsServiceModule,
+    FirebaseFooterFormServiceModule
 
 
 
