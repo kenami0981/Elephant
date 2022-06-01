@@ -15,6 +15,8 @@ import { FirebaseBenefitsServiceModule } from '@benefit';
 import { FirebasePromotionsServiceModule } from '@promo';
 import { FirebaseTestimonialsServiceModule } from '@testimonials';
 import { FirebaseFoundersServiceModule } from '@founders';
+import { FirebaseFooterFormServiceModule, FirebaseFooterIconsServiceModule, FirebaseFooterTextsServiceModule } from '@footer';
+
 
 
 @NgModule({
@@ -35,7 +37,11 @@ import { FirebaseFoundersServiceModule } from '@founders';
     FirebaseBenefitsServiceModule,
     FirebasePromotionsServiceModule,
     FirebaseTestimonialsServiceModule,
-    FirebaseFoundersServiceModule
+    FirebaseFoundersServiceModule,
+    FirebaseFooterTextsServiceModule,
+    FirebaseFooterIconsServiceModule,
+    FirebaseFooterFormServiceModule
+
 
 
 

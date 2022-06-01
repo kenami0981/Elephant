@@ -20,15 +20,9 @@ export class FirebaseProductsService
       .pipe(map((data: ProductDTO[]) => filterByCriterion(data, criterion)));
   }
 
-  // getOne(id: string): Observable<ProductDTO> {
-  //   return this._client
-  //     .doc<ProductDTO>('product-heading/' + id)
-  //     .valueChanges({ idField: 'id' }) as Observable<ProductDTO>;
-  // }
-
   getOne(id: string): Observable<ProductDTO> {
     return this._client
-      .doc<ProductDTO>('product-list/' + id)
+      .doc<ProductDTO>('product-heading/' + id)
       .valueChanges({ idField: 'id' })
       .pipe(
         switchMap((item) =>
