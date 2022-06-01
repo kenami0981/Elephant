@@ -7,23 +7,23 @@ import { SingleProductPageModule } from './pages/single-product.page-module';
 import { AllProductsPageModule } from './pages/all-products.page-module';
 
 const routes: Routes = [{ 
-        path: 'home', 
+        path: '', 
         loadChildren: () => HomePageModule
       },
   { 
-        path: 'contact', 
+        path: 'Elephants/contact', 
         loadChildren: () => ContactPageModule
       },
   { 
-        path: 'about', 
+        path: 'Elephants/about', 
         loadChildren: () => AboutUsPageModule
       },
   { 
-        path: 'product', 
+        path: 'Elephants/product', 
         loadChildren: () => SingleProductPageModule
       },
   { 
-        path: 'allProducts', 
+        path: 'Elephants/allProducts', 
         loadChildren: () => AllProductsPageModule
       }
 ];
