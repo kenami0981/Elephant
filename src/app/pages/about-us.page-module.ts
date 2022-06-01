@@ -6,6 +6,7 @@ import { AboutUsPage } from './about-us.page';
 import { FoundersComponentModule } from '../../../projects/founders/src';
 import { TestimonialsComponentModule } from '@testimonials';
 import { FooterComponentModule } from '@footer';
+import { AboutHeroComponentModule } from '@about';
 
 @NgModule({ imports: [CommonModule, 
       RouterModule.forChild([
@@ -18,7 +19,8 @@ import { FooterComponentModule } from '@footer';
   FirebaseNavigationServiceModule,
   FoundersComponentModule,
   TestimonialsComponentModule,
-  FooterComponentModule
+  FooterComponentModule,
+  AboutHeroComponentModule
 ],
   	declarations: [AboutUsPage],
   	providers: [],

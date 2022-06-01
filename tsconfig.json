@@ -28,7 +28,8 @@
       "@footer": ["projects/footer/src/index.ts"],
       "@testimonials": ["projects/testimonials/src/index.ts"],
       "@products": ["projects/products/src/index.ts"],
-      "@all-products": ["projects/all/products/src/index.ts"]
+      "@all-products": ["projects/all/products/src/index.ts"],
+      "@about": ["projects/about/src/index.ts"]
     }
   },
   "angularCompilerOptions": {
