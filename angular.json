@@ -248,6 +248,22 @@
           }
         }
       }
+    },
+    "footer": {
+      "projectType": "library",
+      "root": "projects/footer",
+      "sourceRoot": "projects/footer/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/footer"],
+          "options": {
+            "jestConfig": "projects/footer/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "defaultProject": "Elephants"

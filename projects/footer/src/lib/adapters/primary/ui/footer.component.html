@@ -1,65 +1,43 @@
 <section style="background-color:#FBFBFB; width:100vw" >
 <div class="container py-5">
   <div class="row row-cols-4 bodrder-2 border-bottom pb-5">
-    <div class="col">
-      <p class="fw-bold text-uppercase pb-5">Company Info</p>
-      <p>Latest Posts</p>
-      <p>Contact Us</p>
-      <p>Shop</p>
+    <div class="col"  *ngFor="let text of texts$ | async">
+      <p class="fw-bold text-uppercase pb-5">{{text.title}}</p>
+      <p>{{text.text1}}</p>
+      <p>{{text.text2}}</p>
+      <p>{{text.text3}}</p>
+      <p>{{text.text4}}</p>
+      <p>{{text.text5}}</p>
     </div>
+
     <div class="col">
-      <p class="fw-bold text-uppercase pb-5">Help links</p>
-      <p>Tracking</p>
-      <p>Order Status</p>
-      <p>Delivery</p>
-      <p>Shipping Info</p>
-      <p>FAQ</p>
-    </div>
-    <div class="col">
-      <p class="fw-bold text-uppercase pb-5">Useful links</p>
-      <p>Special Offers</p>
-      <p>Gift Cards</p>
-      <p>Advetising</p>
-      <p>Terms of Use</p>
-    </div>
-    <div class="col">
-      <p class="fw-bold text-uppercase pb-5">Get in the know</p>
-      <input class="pb-2"
-        class="border-0"
+      <p *ngIf="text$ | async as text" class="fw-bold text-uppercase pb-5">{{text.title}}</p>
+      <form [formGroup]="footerForm" (ngSubmit)="onSubmitSendemailed(footerForm)" class="'d-flex">
+        <input
+        type="text"
+        formControlName="email"
         placeholder="Enter email"
-      />
+        class="border-0"
+        style="background-color: #fbfbfb;"
+        >
+        <input type="submit" value="-->" class="px-3">
+    </form>
       <hr>
     </div>
   </div>
   <div class="container py-5">
     <div class="row">
       <div class="col-sm-8">
-        <p>@ 2020 NorthStar eCommerce</p>
+        <p *ngIf="text$ | async as text">{{text.text1}}</p>
         <div class="d-flex">
-          <p>Privacy Policy</p>
-          <p>Terms & Conditions</p>
+          <p *ngIf="text$ | async as text">{{text.text2}}</p>
         </div>
       </div>
       <div class="col-sm-4">
-        <img
+        <img *ngFor="let icon of icons$ | async"
           style="width: 56px; height: 34px"
           class="me-4"
-          src="https://s3-alpha-sig.figma.com/img/1c9d/d583/24bc8d20ec2fb9c01ac67e66ab576c6a?Expires=1654473600&Signature=ExTuvDsYJkhLr2MmDOuKQ57K8tixWqzyDir-9tCLj~Izwp9kLdz4fpMr4kHIyBkxOdTL1j~-ozHZfiFa-FRlc~Gm8-EEfvZvPjC8dpD~4fvk3JKWjXClDWNdTFzCmXXHCEnQEKOQG5oq6gGLLwhI34-nZ5J1rvzbfztZ0q4BB-Fg3W3KFgnpNegqrZr2CkJwYFvpeIuFHCNTApGAh7tUCdfl9qw-dF6oIB~gMiIHtcIKbzdarOO4MBvaM-0oU9XM9xHj0L~e8PAn84f9eUW012KtIaPxjdZUbYcki4OB-fgMhpjUhddiw~WTXzul2ff3drXgNmqfFqOXoxkmPwTqiQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-        />
-        <img
-          style="width: 56px; height: 34px"
-          class="me-4"
-          src="https://s3-alpha-sig.figma.com/img/e9e2/dd16/053899ff2878f667a635fd7a560d6d2b?Expires=1654473600&Signature=FNNKoP~eZmGLbkywFyhgwTjXmxqZYb6BKAiz1uSi1rTpc59M1xTchKVMTvECDk6tWLSbtk4od5XBQe1Zv4TDgu3~-UHiwH6WIXUfwNi2bndYj6Yz2LB4aZaJr6~vY1fbLp8MtDbkLzjkZKxYQSCCoFWFtmrsieOc1MR-jeoV2zxbum883AIwFyz5~9YHVe7vVaELCVIgC34KTraFZs~1Cg3fU-rhimHiTG51uSGV33H3iV8J1RfEJg7yYsOv3Q~9xbTbv-GP5mXXkha4Mzp6MFcPP2UCmxohBm4MLdTacwJb01WW2Q5AV1ItUHCD0-BGgAyXt-v~GShTroKQX-ykZw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-        />
-        <img
-          style="width: 56px; height: 34px"
-          class="me-4"
-          src="https://s3-alpha-sig.figma.com/img/0790/7732/d09a4ecdd89f6c5e9a8ab9b6d4817a6d?Expires=1654473600&Signature=Cgnq5wyUGgLRxdefFvuBwGB-c6ApGxqXPRcWrc14ZwjnlNqAGw9Hr6olrtkgSgXe0rq2hSPSGaUvbuXwNUXfpmSqI0jOUKCdNEKr7s-WtHOeA9qSNoj6tBp0CgK8YYEvHpLR7zOORKz0bi9EDxTK68JW~4YEGtemonFtdTXCown69dA6pZyGYEUqDbS-9Pt2jikBgmpRunVx7pazwtwRkgm5QoVku0lJhceWmULZgtZKoOXS1cSxDk4c9htAwxC4If5zkBcENYLuXw0lJauklyYldvYo9BUypBP7kRsVVBDWt7ox6IWTdn5XEiRZbS9iYMFG0iVKmxnAYy8DCU9lSQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-        />
-        <img
-          style="width: 56px; height: 34px"
-          class="me-4"
-          src="https://s3-alpha-sig.figma.com/img/7aea/366f/1a58710adbf86230cf7e2a4e2e66af2c?Expires=1654473600&Signature=Uq0-jWPw4clPwKZm9A-BxiG27Zg2RSB4uAsBNTfUrOEPKxhv0ls~rhz3pZh2OWqP1cBKFDS7f1FhZ6EcbY7aPfeNneuBZcs2EB1E1UvzX9JZ5taGNBrv6F4qoVWEpWA7dt4Hno~QJsCFqoeklME2YmnaLHg1h7NBrz2G1KGXuDRoH~2zzxX7yazD73Q50lcahBIQrEDpRDo9GNjusuA-jusBnSJVzdAn59ZC-LE2ZFiRzBIrjtuU1nvnk9CacBdZA65Q0o8iIv6u6~ZbHaVJ6ZAbEKVuW49rDfJm93d6N-q4uRJWi6-0P9cfp6Y7pcRZIusCvJ8tri6K0ssFYG~xCA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+          [src]="icon.iconUrl"
         />
       </div>
     </div>
