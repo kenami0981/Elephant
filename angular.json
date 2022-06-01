@@ -217,7 +217,6 @@
         }
       }
     },
-
     "products": {
       "projectType": "library",
       "root": "projects/products",
@@ -233,7 +232,49 @@
           }
         }
       }
+    },
+    "all-products": {
+      "projectType": "library",
+      "root": "projects/all/products",
+      "sourceRoot": "projects/all/products/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/all-products"],
+          "options": {
+            "jestConfig": "projects/all/products/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+
+    "about": {
+      "projectType": "library",
+      "root": "projects/about",
+      "sourceRoot": "projects/about/src",
+
+    "footer": {
+      "projectType": "library",
+      "root": "projects/footer",
+      "sourceRoot": "projects/footer/src",
+
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+
+          "outputs": ["coverage/about"],
+          "options": {
+            "jestConfig": "projects/about/jest.config.js",
+
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "defaultProject": "Elephants"
+}
 }

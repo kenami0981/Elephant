@@ -23,7 +23,9 @@ import {
 })
 export class ProductsComponent {
   products$: Observable<ProductDTO[]> = this._getsAllProductDto.getAll();
-  product$: Observable<ProductDTO> = this._getsOneProductDto.getOne('DBWQYLsxiTsyJF8Di0yM');
+  product$: Observable<ProductDTO> = this._getsOneProductDto.getOne(
+    'DBWQYLsxiTsyJF8Di0yM'
+  );
 
   constructor(
     @Inject(GETS_ALL_PRODUCT_DTO)
