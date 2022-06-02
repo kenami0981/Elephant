@@ -22,7 +22,7 @@ export class FirebaseProductsService
 
   getOne(id: string): Observable<ProductDTO> {
     return this._client
-      .doc<ProductDTO>('product-heading/' + id)
+      .doc<ProductDTO>('product-list/' + id)
       .valueChanges({ idField: 'id' })
       .pipe(
         switchMap((item) =>
