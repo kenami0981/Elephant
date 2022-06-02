@@ -2,10 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
-import { FirebaseProductsServiceModule } from '@products';
+import { AllProductsComponentModule, FirebaseProductsHeaderServiceModule, FirebaseProductsServiceModule, ProductHeaderComponentModule } from '@products';
 import { AllProductsPage } from './all-products.page';
 import { FooterComponentModule } from '@footer';
-import { AllProductsComponentModule } from 'projects/products/src/lib/adapters/primary/components/all-products.component-module';
 
 @NgModule({ imports: [CommonModule, 
       RouterModule.forChild([
@@ -18,7 +17,9 @@ import { AllProductsComponentModule } from 'projects/products/src/lib/adapters/p
   FirebaseNavigationServiceModule,
   FooterComponentModule,
   AllProductsComponentModule,
-  FirebaseProductsServiceModule
+  FirebaseProductsServiceModule,
+  ProductHeaderComponentModule,
+  FirebaseProductsHeaderServiceModule
 ],
   	declarations: [AllProductsPage],
   	providers: [],

@@ -17,6 +17,7 @@ import { FirebaseTestimonialsServiceModule } from '@testimonials';
 import { FirebaseFoundersServiceModule } from '@founders';
 import { FirebaseFooterFormServiceModule, FirebaseFooterIconsServiceModule, FirebaseFooterTextsServiceModule } from '@footer';
 import { FirebaseHeroPhotoServiceModule } from '@about';
+import { FirebaseProductsHeaderServiceModule } from '@products';
 
 
 
@@ -42,7 +43,8 @@ import { FirebaseHeroPhotoServiceModule } from '@about';
     FirebaseFooterTextsServiceModule,
     FirebaseFooterIconsServiceModule,
     FirebaseFooterFormServiceModule,
-    FirebaseHeroPhotoServiceModule
+    FirebaseHeroPhotoServiceModule,
+    FirebaseProductsHeaderServiceModule
 
 
 
