@@ -1,6 +1,6 @@
 <div class="card me-5">
-    <img
-      src="https://s3-alpha-sig.figma.com/img/bde2/f2ac/84af301f802bcb9672795b54ce800fb0?Expires=1655078400&Signature=bMJCYw01FI~CJcHy8~fZt~WEVMgJeee5hCoRFiKbJYtCDNY-lqvKAgYQZgMiMGvUHWo7p7yN6j6OYxiBVVQO1IUKwnAh9IhX50S248W9hi7FNjL83TNhWNS8EFrM0k2aaQvIuPi92vfLisYyWWd2yFzQ2LhisFTbHFEznSdGZqk-AVOjmjVIEYJ98O~1DefqUuQLKKDhWCVKYyyT-uwGLf3fb22PxUn-zBdO84j6jHhJLsU7U-4je8OHn5-3su2pTkncnanS8nQLhHAVfs5wjJC74lX4c1mu-cgTZCTlN142qlNtLoq1bJ70yNPvuhiD5Y0IeMqaXlkMyx4-oQRfFg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+    <img *ngIf="hero$ | async as hero"
+      [src]="hero.heroImageUrl"
       class="card-img"
       style="width: 100vw; height: 448px; object-fit: cover"
       alt="man's shirts"
@@ -10,11 +10,11 @@
     <div
       class="card-img-overlay text-uppercase text-white d-flex flex-column justify-content-end align-items-start me-5"
     >
-      <p
+      <p *ngIf="hero$ | async as hero"
         class="card-title fw-bolder fw-light mb-5 fs-1 ms-4"
         style="font-weight: none"
       >
-        ABOUT NORTHSTAR
+        {{hero.text}}
       </p>
     </div>
   </div>
@@ -22,12 +22,12 @@
   <div class="d-flex p-2 flex-column py-5 mt-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-sm-12">
+        <div class="col-md-6 col-sm-12" *ngFor="let featured of heroFeatured$ | async">
           <div class="card" style="border:0ch;">
             <img
               class="card-img"
               style="object-fit: cover; height: 600px; width:600px;"
-              src="https://s3-alpha-sig.figma.com/img/9d68/3456/d8ed0f8b4fb461f2e62bbc0298d1f3d1?Expires=1655078400&Signature=FZF0PvdGA5AoQTDS7cDVdMnwdQZ8GlpUz-xZL78hCddZWlWSuufNQcTFrOGh07miH7iku-2M5jDDxCr3Ilh3DccADhRFmA7uHhqKbNrvdfeYUNDaR~8vAuX02INdm18VFqoqNAwRdjui~Kw~C0H58yN4ZJzBPG29k7a8tmPudsMaquVznc2-2Mq-Uv7-~DigQGqpmaV0YtraTu69X5ftmqJ3UJri4qjIxwBPmZgtABt-Y~kB0ZR1A-oh~mnR4Egi9VdK4DuM36sr9ULhj8Kf1qt~DlAzvNYX8LsWmQMC3mwMesd~gwij5JelGsNchrHX~GHBBx28D0l1JVYWQFH8Ig__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+              [src]="featured.imageUrl"
             />
   
             <div
@@ -38,27 +38,7 @@
                 type="button"
                 [routerLink]="['/Elephants/allProducts']" routerLinkActive="router-link-active" 
               >
-                BUY NOW
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <div class="card" style="border:0ch;">
-            <img
-              class="card-img"
-              style="object-fit: cover; height: 600px; width:600px;"
-              src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTZ8NjM2OTA1OTJ8fGVufDB8fHx8&ixlib=rb-1.2.1&w=1000&q=80"
-            />
-            <div
-              class="card-img-overlay text-uppercase text-white d-flex flex-column justify-content-end align-items-center me-5"
-            >
-              <a
-                class="rounded-pill card-text mt-3 text-blue bg-light text-decoration-none fs-4 border border-3 px-3 py-1"
-                type="button"
-                [routerLink]="['/Elephants/allProducts']" routerLinkActive="router-link-active"
-              >
-                BUY NOW
+                {{featured.textButton}}
               </a>
             </div>
           </div>
