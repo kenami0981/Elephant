@@ -5,7 +5,6 @@ import { FooterTextDTO } from '../../../application/ports/secondary/dto/footer-t
 import { FooterIconDTO } from '../../../application/ports/secondary/dto/footer-icon.dto';
 import { GETS_ALL_FOOTER_TEXT_DTO, GetsAllFooterTextDtoPort } from '../../../application/ports/secondary/dto/gets-all-footer-text.dto-port';
 import { GETS_ONE_FOOTER_TEXT_DTO, GetsOneFooterTextDtoPort } from '../../../application/ports/secondary/dto/gets-one-footer-text.dto-port';
-import { GETS_ALL_FOOTER_ICON_DTO, GetsAllFooterIconDtoPort } from '../../../application/ports/secondary/dto/gets-all-footer-icon.dto-port';
 import { ADDS_FOOTER_FORM_DTO, AddsFooterFormDtoPort } from '../../../application/ports/secondary/dto/adds-footer-form.dto-port';
 
 @Component({
@@ -19,7 +18,7 @@ export class FooterComponent {
   text$: Observable<FooterTextDTO> = this._getsOneFooterTextDto.getOne(
     'WsuNGEWIfaD9aS7u3Vry'
   );
-  icons$: Observable<FooterIconDTO[]> = this._getsAllFooterIconDto.getAll();
+
   readonly footerForm: FormGroup = new FormGroup({
         email: new FormControl(),
        submit: new FormControl() });
@@ -29,8 +28,7 @@ export class FooterComponent {
     private _getsAllFooterTextDto: GetsAllFooterTextDtoPort,
     @Inject(GETS_ONE_FOOTER_TEXT_DTO)
     private _getsOneFooterTextDto: GetsOneFooterTextDtoPort,
-    @Inject(GETS_ALL_FOOTER_ICON_DTO)
-    private _getsAllFooterIconDto: GetsAllFooterIconDtoPort, @Inject(ADDS_FOOTER_FORM_DTO) private _addsFooterFormDto: AddsFooterFormDtoPort
+   @Inject(ADDS_FOOTER_FORM_DTO) private _addsFooterFormDto: AddsFooterFormDtoPort
   ) {}
 
   onSubmitSendemailed(footerForm: FormGroup): void {
