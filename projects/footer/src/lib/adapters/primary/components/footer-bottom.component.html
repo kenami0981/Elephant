@@ -1,0 +1,15 @@
+<div class="container py-3">
+    <div class="row">
+      <div class="col-sm-8" *ngFor="let text of texts$ | async">
+        <p >{{text.text1}}</p>
+        <p>{{text.text2}}</p>
+      </div>
+      <div class="col-sm-4">
+        <img *ngFor="let icon of icons$ | async"
+          style="width: 56px; height: 34px"
+          class="me-4"
+          [src]="icon.iconUrl"
+        />
+      </div>
+    </div>
+  </div>

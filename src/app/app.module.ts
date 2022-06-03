@@ -15,7 +15,7 @@ import { FirebaseBenefitsServiceModule } from '@benefit';
 import { FirebasePromotionsServiceModule } from '@promo';
 import { FirebaseTestimonialsServiceModule } from '@testimonials';
 import { FirebaseFoundersServiceModule } from '@founders';
-import { FirebaseFooterFormServiceModule, FirebaseFooterIconsServiceModule, FirebaseFooterTextsServiceModule } from '@footer';
+import { FirebaseFooterBottomServiceModule, FirebaseFooterFormServiceModule, FirebaseFooterIconsServiceModule, FirebaseFooterTextsServiceModule } from '@footer';
 import { FirebaseHeroPhotoServiceModule } from '@about';
 import { FirebaseProductsHeaderServiceModule } from '@products';
 
@@ -41,10 +41,11 @@ import { FirebaseProductsHeaderServiceModule } from '@products';
     FirebaseTestimonialsServiceModule,
     FirebaseFoundersServiceModule,
     FirebaseFooterTextsServiceModule,
-    FirebaseFooterIconsServiceModule,
     FirebaseFooterFormServiceModule,
     FirebaseHeroPhotoServiceModule,
-    FirebaseProductsHeaderServiceModule
+    FirebaseProductsHeaderServiceModule,
+    FirebaseFooterBottomServiceModule,
+    FirebaseFooterIconsServiceModule
 
 
 

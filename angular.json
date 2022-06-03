@@ -249,32 +249,42 @@
         }
       }
     },
-
     "about": {
       "projectType": "library",
       "root": "projects/about",
       "sourceRoot": "projects/about/src",
-
+      "footer": {
+        "projectType": "library",
+        "root": "projects/footer",
+        "sourceRoot": "projects/footer/src",
+        "prefix": "lib",
+        "architect": {
+          "test": {
+            "builder": "@nrwl/jest:jest",
+            "outputs": ["coverage/about"],
+            "options": {
+              "jestConfig": "projects/about/jest.config.js",
+              "passWithNoTests": true
+            }
+          }
+        }
+      }
+    },
     "footer": {
       "projectType": "library",
       "root": "projects/footer",
       "sourceRoot": "projects/footer/src",
-
       "prefix": "lib",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-
-          "outputs": ["coverage/about"],
+          "outputs": ["coverage/footer"],
           "options": {
-            "jestConfig": "projects/about/jest.config.js",
-
+            "jestConfig": "projects/footer/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     }
   }
-  // "defaultProject": "Elephants"
-}
 }
