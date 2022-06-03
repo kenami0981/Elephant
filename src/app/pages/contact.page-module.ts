@@ -4,8 +4,8 @@ import { RouterModule } from '@angular/router';
 import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
 import { FirebaseContactServiceModule, FormComponentModule } from '@contact';
 import { PromotionComponentModule } from '@promo';
+import { FirebaseFooterBottomServiceModule, FooterBottomComponentModule, FooterComponentModule } from '@footer';
 import { ContactPage } from './contact.page';
-import { FooterComponentModule } from '@footer';
 
 @NgModule({ imports: [CommonModule, 
       RouterModule.forChild([
@@ -20,6 +20,8 @@ import { FooterComponentModule } from '@footer';
   FirebaseContactServiceModule,
   PromotionComponentModule,
   FooterComponentModule,
+  FooterBottomComponentModule,
+  FirebaseFooterBottomServiceModule
 ],
   	declarations: [ContactPage],
   	providers: [],

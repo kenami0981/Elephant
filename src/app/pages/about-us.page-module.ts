@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
-import { AboutUsPage } from './about-us.page';
-import { FoundersComponentModule } from '../../../projects/founders/src';
+import { FoundersComponentModule } from '@founders';
 import { TestimonialsComponentModule } from '@testimonials';
-import { FooterComponentModule } from '@footer';
+import { FirebaseFooterBottomServiceModule, FooterBottomComponentModule, FooterComponentModule } from '@footer';
 import { AboutHeroComponentModule } from '@about';
+import { AboutUsPage } from './about-us.page';
 
 @NgModule({ imports: [CommonModule, 
       RouterModule.forChild([
@@ -20,7 +20,9 @@ import { AboutHeroComponentModule } from '@about';
   FoundersComponentModule,
   TestimonialsComponentModule,
   FooterComponentModule,
-  AboutHeroComponentModule
+  AboutHeroComponentModule,
+  FooterBottomComponentModule,
+  FirebaseFooterBottomServiceModule
 ],
   	declarations: [AboutUsPage],
   	providers: [],

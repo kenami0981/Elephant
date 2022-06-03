@@ -1,6 +1,6 @@
 <section style="background-color:#FBFBFB; width:100vw" >
 <div class="container py-5">
-  <div class="row row-cols-4 bodrder-2 border-bottom pb-5">
+  <div class="row row-cols-4 bodrder-2 border-bottom pb-3">
     <div class="col"  *ngFor="let text of texts$ | async">
       <p class="fw-bold text-uppercase pb-5">{{text.title}}</p>
       <p>{{text.text1}}</p>
@@ -23,23 +23,6 @@
         <input type="submit" value="-->" class="px-3">
     </form>
       <hr>
-    </div>
-  </div>
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-sm-8">
-        <p *ngIf="text$ | async as text">{{text.text1}}</p>
-        <div class="d-flex">
-          <p *ngIf="text$ | async as text">{{text.text2}}</p>
-        </div>
-      </div>
-      <!-- <div class="col-sm-4">
-        <img *ngFor="let icon of icons$ | async"
-          style="width: 56px; height: 34px"
-          class="me-4"
-          [src]="icon.iconUrl"
-        />
-      </div> -->
     </div>
   </div>
 </div>
