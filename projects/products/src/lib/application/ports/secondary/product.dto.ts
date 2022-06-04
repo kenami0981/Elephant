@@ -5,7 +5,7 @@ export interface ProductDTO {
   readonly currency: string;
   readonly imageUrl: string;
   readonly alt: string;
-  readonly id: number;
+  readonly id: string;
   readonly routerLink: string;
   readonly sex: string;
 

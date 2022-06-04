@@ -10,6 +10,10 @@ import {
   GETS_ALL_PRODUCT_DTO,
   GetsAllProductDtoPort,
 } from '../../../application/ports/secondary/gets-all-product.dto-port';
+import {
+  SETS_STATE_PRODUCT_CONTEXT,
+  SetsStateProductContextPort,
+} from '../../../application/ports/secondary/context/sets-state-product.context-port';
 
 @Component({
   selector: 'lib-all-products',
@@ -22,6 +26,13 @@ export class AllProductsComponent {
 
   constructor(
     @Inject(GETS_ALL_PRODUCT_DTO)
-    private _getsAllProductDto: GetsAllProductDtoPort
+    private _getsAllProductDto: GetsAllProductDtoPort,
+    @Inject(SETS_STATE_PRODUCT_CONTEXT)
+    private _setsStateProductContext: SetsStateProductContextPort
   ) {}
+
+  onClickClicked(id: string): void {
+    this._setsStateProductContext.setState({ id }).subscribe();
+    console.log(id);
+  }
 }
