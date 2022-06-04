@@ -1,28 +1,34 @@
 <section class="container text-center">
-    <div class="row">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+  <div class="row">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+      <div
+        *ngFor="let product of products$ | async"
+        class="col d-flex justify-content-center align-items-center"
+      >
         <div
-          *ngFor="let product of products$ | async"
-          [routerLink]="'/Elephants/product/'+product.id"
-          class="col d-flex justify-content-center align-items-center"
+          class="card border-0"
+          style="width: 295px"
+
         >
-          <div class="card border-0" style="width: 295px">
-            <img
-              style="width: 295px; height: 342px; object-fit: cover"
-              [src]="product.imageUrl"
-              class="card-img-top"
-              [alt]="product.title"
-            />
-            <div class="card-body">
-              <h5 class="card-title fw-bold">{{ product.name }}</h5>
-              <p class="card-text text-primary">
-                <span>{{ product.currency }}</span
-                >{{ product.price }}
-              </p>
-            </div>
+        <div (click)="onClickClicked(product.id)"
+       >
+          <img
+          
+            style="width: 295px; height: 342px; object-fit: cover"
+            [src]="product.imageUrl"
+            class="card-img-top"
+            [alt]="product.title"
+          />
+        </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">{{ product.name }}</h5>
+            <p class="card-text text-primary">
+              <span>{{ product.currency }}</span
+              >{{ product.price }}
+            </p>
           </div>
         </div>
       </div>
-
     </div>
-  </section>
+  </div>
+</section>

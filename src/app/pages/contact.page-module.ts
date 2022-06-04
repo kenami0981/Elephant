@@ -21,7 +21,7 @@ import { ContactPage } from './contact.page';
   PromotionComponentModule,
   FooterComponentModule,
   FooterBottomComponentModule,
-  FirebaseFooterBottomServiceModule
+  FirebaseFooterBottomServiceModule,
 ],
   	declarations: [ContactPage],
   	providers: [],

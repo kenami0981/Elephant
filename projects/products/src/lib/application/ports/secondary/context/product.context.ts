@@ -1,3 +1,3 @@
 export interface ProductContext {
-  readonly productId: string;
+  readonly id: string;
 }

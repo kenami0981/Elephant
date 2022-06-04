@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
-import { FirebaseProductsServiceModule, SingleProductComponentModule } from '@products';
+import { FirebaseFooterBottomServiceModule, FooterBottomComponentModule, FooterComponentModule } from '@footer';
+import { FirebaseProductsServiceModule, InMemoryProductContextStorageModule, SingleProductComponentModule } from '@products';
 import { SingleProductPage } from './single-product.page';
-import { FooterComponentModule } from '@footer';
+
 
 @NgModule({
   imports: [
@@ -21,7 +22,10 @@ import { FooterComponentModule } from '@footer';
     NavComponentModule,
     FooterComponentModule,
     SingleProductComponentModule,
-    FirebaseProductsServiceModule
+    FirebaseProductsServiceModule,
+    FooterBottomComponentModule,
+    FirebaseFooterBottomServiceModule,
+    InMemoryProductContextStorageModule
   ],
   declarations: [SingleProductPage],
   providers: [],
