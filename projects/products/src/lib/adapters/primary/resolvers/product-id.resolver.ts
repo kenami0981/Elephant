@@ -20,10 +20,10 @@ export class ProductIdResolver implements Resolve<boolean> {
 
   resolve(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
+    state: RouterStateSnapshot,
   ): Observable<boolean> {
     return this._setsStateProductContext
-      .setState({ id: route.params['id'] })
+      .setState({ productId: route.params['productId'] })
       .pipe(map((_) => true));
   }
 }

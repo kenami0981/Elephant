@@ -24,7 +24,7 @@ import { SingleProductPage } from './single-product.page';
     CommonModule,
     RouterModule.forChild([
       {
-        path: ':productId',
+        path: '',
         component: SingleProductPage,
         resolve: {
           productId: ProductIdResolver,

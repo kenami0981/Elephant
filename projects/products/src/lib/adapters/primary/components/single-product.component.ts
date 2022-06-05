@@ -28,7 +28,7 @@ export class SingleProductComponent {
     .select()
     .pipe(
       switchMap((context) =>
-        this._getsOneProductDto.getOne(context.id as string)
+        this._getsOneProductDto.getOne(context.productId as string)
       ),
       tap((data) => console.log(data))
     );
