@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
 import { FirebaseFooterBottomServiceModule, FooterBottomComponentModule, FooterComponentModule } from '@footer';
-import { FirebaseProductsServiceModule, InMemoryProductContextStorageModule, SingleProductComponentModule } from '@products';
+import { FirebaseProductsServiceModule, InMemoryProductContextStorageModule, ProductIdResolver, ProductIdResolverModule, SingleProductComponentModule } from '@products';
 import { SingleProductPage } from './single-product.page';
 
 
@@ -12,8 +12,11 @@ import { SingleProductPage } from './single-product.page';
     CommonModule,
     RouterModule.forChild([
       {
-        path: ':productId',
+        path: ':productIId',
         component: SingleProductPage,
+        resolve: {
+          productId: ProductIdResolver,
+        }
       },
     ]),
     NavComponentModule,
@@ -25,7 +28,9 @@ import { SingleProductPage } from './single-product.page';
     FirebaseProductsServiceModule,
     FooterBottomComponentModule,
     FirebaseFooterBottomServiceModule,
-    InMemoryProductContextStorageModule
+    InMemoryProductContextStorageModule,
+    ProductIdResolverModule,
+
   ],
   declarations: [SingleProductPage],
   providers: [],

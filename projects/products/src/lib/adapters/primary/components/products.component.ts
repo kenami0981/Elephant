@@ -1,8 +1,8 @@
 import {
-  Component,
-  ViewEncapsulation,
   ChangeDetectionStrategy,
+  Component,
   Inject,
+  ViewEncapsulation,
 } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ProductDTO } from '../../../application/ports/secondary/product.dto';
@@ -14,6 +14,7 @@ import {
   GETS_ONE_PRODUCT_DTO,
   GetsOneProductDtoPort,
 } from '../../../application/ports/secondary/gets-one-product.dto-port';
+
 
 @Component({
   selector: 'lib-products',
@@ -31,6 +32,13 @@ export class ProductsComponent {
     @Inject(GETS_ALL_PRODUCT_DTO)
     private _getsAllProductDto: GetsAllProductDtoPort,
     @Inject(GETS_ONE_PRODUCT_DTO)
-    private _getsOneProductDto: GetsOneProductDtoPort
+    private _getsOneProductDto: GetsOneProductDtoPort,
+    // @Inject(SETS_STATE_PRODUCT_CONTEXT)
+    // private _setsStateProductContext: SetsStateProductContextPort
   ) {}
-}
+
+//   onProductClicked(id: string): void {
+//     this._setsStateProductContext.setState({ id }).subscribe();
+//     console.log(id);
+//   }
+ }

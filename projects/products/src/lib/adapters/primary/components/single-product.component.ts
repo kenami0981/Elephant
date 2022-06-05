@@ -5,7 +5,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { switchMap, tap } from 'rxjs/operators';
 import { ProductDTO } from '../../../application/ports/secondary/product.dto';
 import { ProductContext } from '../../../application/ports/secondary/context/product.context';
 import {
@@ -29,7 +29,8 @@ export class SingleProductComponent {
     .pipe(
       switchMap((context) =>
         this._getsOneProductDto.getOne(context.id as string)
-      )
+      ),
+      tap((data) => console.log(data))
     );
   productId$: Observable<Partial<ProductContext>> =
     this._selectsProductContext.select();

@@ -1,24 +1,20 @@
 <section class="container text-center py-3">
   <div class="row py-5">
-    <!-- <h1 class="fw-bold" *ngIf="product$ | async as product">
-      {{ product.title }}
-      <span class="text-uppercase" *ngIf="product$ | async as product">{{ product.middleText }}</span
-      >{{ product.title2 }}
-    </h1> -->
-
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
       <div
         *ngFor="let product of products$ | async"
-        [routerLink]="'/Elephants/product/'+product.id"
+     
         class="col d-flex justify-content-center align-items-center"
         >
         <div class="card border-0" style="width: 295px">
+          <a [routerLink]="'/Elephants/product/'+product.id">
           <img
             style="width: 295px; height: 342px; object-fit: cover"
             [src]="product.imageUrl"
             class="card-img-top"
             [alt]="product.title"
           />
+        </a>
           <div class="card-body">
             <h5 class="card-title fw-bold">{{ product.name }}</h5>
             <p class="card-text text-primary">

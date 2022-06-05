@@ -1,9 +1,11 @@
-<section class="container py-5">
+
+<section class="container py-5" *ngIf="product$ | async as product">
+  {{ product$ | async | json }}
   <div class="card mb-3 border-0">
     <div class="row">
       <div class="col">
         <img
-          [src]="(product$ | async)?.imageUrl"
+          [src]="product.imageUrl"
           class="rounded-start"
           style="width: 550px; height: 685px"
           [alt]="(product$ | async)?.alt"
