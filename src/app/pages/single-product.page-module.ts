@@ -23,7 +23,7 @@ import { SingleProductPage } from './single-product.page';
     FirebaseProductsServiceModule,
     FooterBottomComponentModule,
     FirebaseFooterBottomServiceModule,
-    InMemoryProductContextStorageModule,
+    InMemoryProductContextStorageModule
   ],
   declarations: [SingleProductPage],
   providers: [],
