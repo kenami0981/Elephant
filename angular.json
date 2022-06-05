@@ -1,1 +1,290 @@
-{"$schema":"./node_modules/@angular/cli/lib/config/schema.json","version":1,"newProjectRoot":"projects","projects":{"Elephants":{"projectType":"application","schematics":{"@schematics/angular:component":{"style":"scss"},"@schematics/angular:application":{"strict":true}},"root":"","sourceRoot":"src","prefix":"app","architect":{"build":{"builder":"@angular-devkit/build-angular:browser","options":{"outputPath":"dist/elephants","index":"src/index.html","main":"src/main.ts","polyfills":"src/polyfills.ts","tsConfig":"tsconfig.app.json","inlineStyleLanguage":"scss","assets":["src/favicon.ico","src/assets"],"styles":["src/styles.scss"],"scripts":[]},"configurations":{"production":{"budgets":[{"type":"initial","maximumWarning":"500kb","maximumError":"1mb"},{"type":"anyComponentStyle","maximumWarning":"2kb","maximumError":"4kb"}],"fileReplacements":[{"replace":"src/environments/environment.ts","with":"src/environments/environment.prod.ts"}],"outputHashing":"all"},"development":{"buildOptimizer":false,"optimization":false,"vendorChunk":true,"extractLicenses":false,"sourceMap":true,"namedChunks":true}},"defaultConfiguration":"production"},"serve":{"builder":"@angular-devkit/build-angular:dev-server","configurations":{"production":{"browserTarget":"Elephants:build:production"},"development":{"browserTarget":"Elephants:build:development"}},"defaultConfiguration":"development"},"extract-i18n":{"builder":"@angular-devkit/build-angular:extract-i18n","options":{"browserTarget":"Elephants:build"}},"test":{"builder":"@angular-devkit/build-angular:karma","options":{"main":"src/test.ts","polyfills":"src/polyfills.ts","tsConfig":"tsconfig.spec.json","karmaConfig":"karma.conf.js","inlineStyleLanguage":"scss","assets":["src/favicon.ico","src/assets"],"styles":["src/styles.scss"],"scripts":[]}},"deploy":{"builder":"@angular/fire:deploy","options":{"prerender":false,"ssr":false,"browserTarget":"Elephants:build:production","firebaseProject":"elephants1","firebaseHostingSite":"elephants1"}}}},"navigation":{"projectType":"library","root":"projects/navigation","sourceRoot":"projects/navigation/src","prefix":"lib","architect":{"test":{"builder":"@nrwl/jest:jest","outputs":["coverage/navigation"],"options":{"jestConfig":"projects/navigation/jest.config.js","passWithNoTests":true}}}},"contact":{"projectType":"library","root":"projects/contact","sourceRoot":"projects/contact/src","prefix":"lib","architect":{"test":{"builder":"@nrwl/jest:jest","outputs":["coverage/contact"],"options":{"jestConfig":"projects/contact/jest.config.js","passWithNoTests":true}}}},"benefit":{"projectType":"library","root":"projects/benefit","sourceRoot":"projects/benefit/src","prefix":"lib","architect":{"build":{"builder":"@angular-devkit/build-angular:ng-packagr","options":{"project":"projects/benefit/ng-package.json"},"configurations":{"production":{"tsConfig":"projects/benefit/tsconfig.lib.prod.json"},"development":{"tsConfig":"projects/benefit/tsconfig.lib.json"}},"defaultConfiguration":"production"}}},"promo":{"projectType":"library","root":"projects/promo","sourceRoot":"projects/promo/src","prefix":"lib","architect":{"build":{"builder":"@angular-devkit/build-angular:ng-packagr","options":{"project":"projects/promo/ng-package.json"},"configurations":{"production":{"tsConfig":"projects/promo/tsconfig.lib.prod.json"},"development":{"tsConfig":"projects/promo/tsconfig.lib.json"}},"defaultConfiguration":"production"}}},"founders":{"projectType":"library","root":"projects/founders","sourceRoot":"projects/founders/src","prefix":"lib","architect":{"test":{"builder":"@nrwl/jest:jest","outputs":["coverage/founders"],"options":{"jestConfig":"projects/founders/jest.config.js","passWithNoTests":true}}}}},"defaultProject":"Elephants"}
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "Elephants": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": { "style": "scss" },
+        "@schematics/angular:application": { "strict": true }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/elephants",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": { "browserTarget": "Elephants:build:production" },
+            "development": { "browserTarget": "Elephants:build:development" }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": { "browserTarget": "Elephants:build" }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
+            "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Elephants:build:production",
+            "firebaseProject": "elephants1",
+            "firebaseHostingSite": "elephants1"
+          }
+        }
+      }
+    },
+    "navigation": {
+      "projectType": "library",
+      "root": "projects/navigation",
+      "sourceRoot": "projects/navigation/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/navigation"],
+          "options": {
+            "jestConfig": "projects/navigation/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "contact": {
+      "projectType": "library",
+      "root": "projects/contact",
+      "sourceRoot": "projects/contact/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/contact"],
+          "options": {
+            "jestConfig": "projects/contact/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "benefit": {
+      "projectType": "library",
+      "root": "projects/benefit",
+      "sourceRoot": "projects/benefit/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": { "project": "projects/benefit/ng-package.json" },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/benefit/tsconfig.lib.prod.json"
+            },
+            "development": { "tsConfig": "projects/benefit/tsconfig.lib.json" }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "promo": {
+      "projectType": "library",
+      "root": "projects/promo",
+      "sourceRoot": "projects/promo/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": { "project": "projects/promo/ng-package.json" },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/promo/tsconfig.lib.prod.json"
+            },
+            "development": { "tsConfig": "projects/promo/tsconfig.lib.json" }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "founders": {
+      "projectType": "library",
+      "root": "projects/founders",
+      "sourceRoot": "projects/founders/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/founders"],
+          "options": {
+            "jestConfig": "projects/founders/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "selling": {
+      "projectType": "library",
+      "root": "projects/selling",
+      "sourceRoot": "projects/selling/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": { "project": "projects/selling/ng-package.json" },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/selling/tsconfig.lib.prod.json"
+            },
+            "development": { "tsConfig": "projects/selling/tsconfig.lib.json" }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "testimonials": {
+      "projectType": "library",
+      "root": "projects/testimonials",
+      "sourceRoot": "projects/testimonials/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/testimonials"],
+          "options": {
+            "jestConfig": "projects/testimonials/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "products": {
+      "projectType": "library",
+      "root": "projects/products",
+      "sourceRoot": "projects/products/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/products"],
+          "options": {
+            "jestConfig": "projects/products/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "all-products": {
+      "projectType": "library",
+      "root": "projects/all/products",
+      "sourceRoot": "projects/all/products/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/all-products"],
+          "options": {
+            "jestConfig": "projects/all/products/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "about": {
+      "projectType": "library",
+      "root": "projects/about",
+      "sourceRoot": "projects/about/src",
+      "footer": {
+        "projectType": "library",
+        "root": "projects/footer",
+        "sourceRoot": "projects/footer/src",
+        "prefix": "lib",
+        "architect": {
+          "test": {
+            "builder": "@nrwl/jest:jest",
+            "outputs": ["coverage/about"],
+            "options": {
+              "jestConfig": "projects/about/jest.config.js",
+              "passWithNoTests": true
+            }
+          }
+        }
+      }
+    },
+    "footer": {
+      "projectType": "library",
+      "root": "projects/footer",
+      "sourceRoot": "projects/footer/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/footer"],
+          "options": {
+            "jestConfig": "projects/footer/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  }
+}

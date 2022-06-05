@@ -1,0 +1,48 @@
+<div class="card me-5">
+    <img *ngIf="hero$ | async as hero"
+      [src]="hero.heroImageUrl"
+      class="card-img"
+      style="width: 100vw; height: 448px; object-fit: cover"
+      alt="man's shirts"
+      data-bgposition="center center"
+      data-bgrepeat="no-repeat"
+    />
+    <div
+      class="card-img-overlay text-uppercase text-white d-flex flex-column justify-content-end align-items-start me-5"
+    >
+      <p *ngIf="hero$ | async as hero"
+        class="card-title fw-bolder fw-light mb-5 fs-1 ms-4"
+        style="font-weight: none"
+      >
+        {{hero.text}}
+      </p>
+    </div>
+  </div>
+  
+  <div class="d-flex p-2 flex-column py-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12" *ngFor="let featured of heroFeatured$ | async">
+          <div class="card" style="border:0ch;">
+            <img
+              class="card-img"
+              style="object-fit: cover; height: 600px; margin-bottom:10px;"
+              [src]="featured.imageUrl"
+            />
+  
+            <div
+              class="card-img-overlay text-uppercase text-white d-flex flex-column justify-content-end align-items-center me-5"
+            >
+              <a
+                class="rounded-pill card-text mt-3 text-blue bg-light text-decoration-none fs-4 border border-3 px-3 py-1"
+                type="button"
+                [routerLink]="['/Elephants/allProducts']" routerLinkActive="router-link-active" 
+              >
+                {{featured.textButton}}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

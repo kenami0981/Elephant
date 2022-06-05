@@ -7,6 +7,7 @@ export const environment = {
     projectId: 'elephants1',
     appId: '1:630431815602:web:09965cabd0fa2fed80f6ab',
     storageBucket: 'elephants1.appspot.com',
+    locationId: 'europe-west',
     apiKey: 'AIzaSyBcEANMmkshhzd1n9RLa_M3Zgpgk7AEeeA',
     authDomain: 'elephants1.firebaseapp.com',
     messagingSenderId: '630431815602',

@@ -1,24 +1,52 @@
-<div>
-  <div class="card me-5">
-    <img
-    src="https://s3-alpha-sig.figma.com/img/98cf/944a/401ee6dd7cb8b32f35703f88f482980a?Expires=1654473600&Signature=dtG462bjHqf4nUhhAPG04MlITaNFTVYaEEQuovfQ-tunj7Nl6wjPHYXIquZnKTwrCjq9WoU2QbxuGQ5vPbqx6t9zizDV-yDgoj0yB8S9-Ses80KsGLHF4JL21RsaQMkDIk61Rh25x8i2yulbTuEo4Yua-U55nOj3uGig2p4uJwLbMWF6Us8bkAZJPI98YmStMmbYbA9EuX0wWU3SvyJsghiqU5guK2h5m7vl7eIy~pe3yXXiLhqaTNfqLfuk4dPZacO4cS0d6hPp6MpRSNXJLhywNc7Iz497Uqj8OTcMdujGDm8O6fdiTUG8RWSKRZf-22O5VLs6taZosZ9P08G6XA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="contact"
-      class="card-img"
-      style="width: 100vw; height: 348px; object-fit: cover"
-      alt="contact"
-      data-bgposition="center center"
-    />
-  </div>
-    <div 
-    class="card-img-overlay text-uppercase text-white d-flex flex-column justify-content-center align-items-left me-5">
-    <div class="bottom-left">CONTACT US</div>
-    <br>
-    <br>
-    <br>
-    <br>
+<section class="mb-4">
+  <img src="https://s3-alpha-sig.figma.com/img/98cf/944a/401ee6dd7cb8b32f35703f88f482980a?Expires=1655078400&Signature=hnHItuA2sXSj0cTpcd45yl0tyRiAZQrjJQpvv9L7EN5p3crhSqcShGQ1UJ98CIJH5Bjip9gfwRk86nX8oN7WgykK0aUj5WL7lniJzsIUrJ~gx9y6qQR0KKcN~ZsHVWZkSulYO8xJe1e0-g9SyBWuzu3xaSv3XmRl5rF~5rkqXdyQLVYDfsEvQLcdeYJhJBCh9ZGmc7veED3WnJxMCV8o1pxR32C2BujtJpty~bkU1dhBVMkeMWraelNX~KokmsrIg9esnHOhp13IZ0UmFss1o3rTlXGiB~qSM1gKuSpgkOzESaQi9r4bESbRIpPgeYGRyT27lMvt3oruhvV6sj8T-g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" class="img-fluid" alt="image" style="width: 100vw; height: 448px; object-fit: cover">
 
+  <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+    
+  <p class="text-center w-responsive mx-auto mb-5">We would love to hear from you. If you have any query or any type of suggestion, you can contact us here. We would love to hear from you.</p>
 
-<form [formGroup]="contact" (ngSubmit)="onContactSubmited(contact)">
-    <input type="text" formControlName="Name" placeholder="Name">
-    <input type="text" formControlName="Email" placeholder="Email">
-    <input type="text" formControlName="Message" placeholder="Message">
-    <button (click)="onContactSubmited(contact)" type="button" class="btn btn-primary me-md-2 ">SEND MESSAGE</button> 
+<div class="container">
+
+        
+        <div class="row">
+          <div class="col-md-8">
+            <form [formGroup]="contact" (ngSubmit)="onContactSubmited(contact)">
+                <input type="text" class="form-control" formControlName="name" placeholder="Name..." /><br />
+                <input class="form-control" formControlName="email" placeholder="E-mail..." /><br />
+              
+
+                <input type="text" class="col-7 form-control" style="width:420px; height: 120px;" formControlName="message" placeholder="message"><br />
+                <input (click)="onContactSubmited(contact)" class="btn btn-primary" type="button" value="Send Message" /><br /><br />
+              </form>
+          </div>
+          <div class="col-md-4">
+            <b>Customer service:</b> <br />
+            Phone: +1 123 456 789<br />
+            E-mail: <a href="mailto:support@elephants.com">support@elephants.com</a><br />
+            <br /><br />
+            <b>Visit Us</b><br />
+            Company Inc, <br />
+            Elephants street 201<br />
+            55001 Elephant City, Poland<br />
+            Phone: +1 234 56789<br />
+            <a href="mailto:poland@elephants.com">poland@elephants.com</a><br />
+        
+        
+            <br /><br />
+            <b>Poland Office:</b><br />
+            Company Elephants, <br />
+            25/F.168 Queen<br />
+            Elephant Av, Poland<br />
+            Phone: +123 123 123 123<br />
+            <a href="mailto:elephant@elephant.com">elephant@elephant.com</a><br />
+        </div>
+        </div>
+        </div>
+
+       
+              
+          
+        
+          
+                
+       

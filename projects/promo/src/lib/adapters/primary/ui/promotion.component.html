@@ -1,22 +1,21 @@
-<section class="py-5">
-<div class="row d-flex justify-content-center align-item-center">
-    <div class="col-sm-6">
+<section class="py-5 container">
+  <div class="row d-flex justify-content-center align-item-center">
+    <div class="col-sm-6" *ngFor="let promotion of promotions$ | async">
       <div class="card text-center">
-        <div class="card-body p-5" style="background-color:black; color: white;">
-          <h3 class="card-title text-uppercase mt-5 mb-4">peace of mind</h3>
-          <p class="card-text">A one-stop platform for all your fashion needs,</p>
-          <p class="card-text">hassle-free. Buy with a peace of mind.</p>
-          <a href="#" class="btn bg-light text-primary text-uppercase px-4 py-2 mt-3 mb-5">by now</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card text-center">
-        <div class="card-body text-light p-5" style="background-color:black; color:white;">
-          <h3 class="card-title text-uppercase mt-5 mb-4">buy 2 get 1 free</h3>
-          <p class="card-text">End of season sale. Buy any 2 items of your choice</p>
-          <p class="card-text">and get 1 free.</p>
-          <a href="#" class="btn bg-light text-primary text-uppercase px-4 py-2 mt-3 mb-5">by now</a>
+        <div
+          class="card-body p-5"
+          style="background-color: black; color: white"
+        >
+          <h3 class="card-title text-uppercase mt-5 mb-4">
+            {{ promotion.title }}
+          </h3>
+          <p class="card-text">{{ promotion.text1 }}</p>
+          <p class="card-text">{{ promotion.text2 }}</p>
+          <a
+          [routerLink]="['/Elephants/allProducts']" routerLinkActive="router-link-active" 
+          class="btn bg-light text-primary text-uppercase px-4 py-2 mt-3 mb-5"
+            >{{ promotion.buttonText }}</a
+          >
         </div>
       </div>
     </div>

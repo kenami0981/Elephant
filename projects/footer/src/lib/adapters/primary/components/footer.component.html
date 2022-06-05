@@ -1,0 +1,29 @@
+<section style="background-color:#FBFBFB">
+<div class="container py-5">
+  <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 bodrder-2 border-bottom pb-3 d-flex justify-content-center align-item-center">
+    <div class="col"  *ngFor="let text of texts$ | async">
+      <p class="fw-bold text-uppercase pb-5">{{text.title}}</p>
+      <p>{{text.text1}}</p>
+      <p>{{text.text2}}</p>
+      <p>{{text.text3}}</p>
+      <p>{{text.text4}}</p>
+      <p>{{text.text5}}</p>
+    </div>
+
+    <div class="col-6 row bodrder-2 pb-3 d-flex justify-content-center align-item-center">
+      <p *ngIf="text$ | async as text" class="fw-bold text-uppercase">{{text.title}}</p>
+      <form [formGroup]="footerForm" (ngSubmit)="onSubmitSendemailed(footerForm)" class="'d-flex">
+        <input
+        type="text"
+        formControlName="email"
+        placeholder="Enter email"
+        class="border-0"
+        style="background-color: #fbfbfb;"
+        >
+        <input type="submit" value="-->" class="px-3">
+        <hr>
+    </form>
+    </div>
+  </div>
+</div>
+</section>

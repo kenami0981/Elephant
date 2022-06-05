@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
-import { FoundersComponentModule } from '../../../projects/founders/src'
+import { NavComponentModule } from '@navigation';
+import { FoundersComponentModule } from '@founders';
+import { TestimonialsComponentModule } from '@testimonials';
+import { FirebaseFooterBottomServiceModule, FooterBottomComponentModule, FooterComponentModule } from '@footer';
+import { AboutHeroComponentModule } from '@about';
 import { AboutUsPage } from './about-us.page';
 
 @NgModule({ imports: [CommonModule, 
@@ -13,8 +16,12 @@ import { AboutUsPage } from './about-us.page';
         }
       ]),
   NavComponentModule,
-  FirebaseNavigationServiceModule,
-  FoundersComponentModule
+  FoundersComponentModule,
+  TestimonialsComponentModule,
+  FooterComponentModule,
+  AboutHeroComponentModule,
+  FooterBottomComponentModule,
+  FirebaseFooterBottomServiceModule,
 ],
   	declarations: [AboutUsPage],
   	providers: [],

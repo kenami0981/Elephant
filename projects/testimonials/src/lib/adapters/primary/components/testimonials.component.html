@@ -1,0 +1,33 @@
+<section
+  class="container py-5 d-flex flex-column justify-content-center align-items-center"
+>
+  <h1 *ngIf="testimonial$ | async as testimonial"
+    class="pb-5 fw-bold py-5"
+    style="color: #1d1d1d; font-size: 36px; font-family: 'Arimo'"
+  >
+    {{testimonial.title}}
+  </h1>
+
+  <div *ngFor="let testimonial of testimonials$ | async" class="card mb-3 border-0 pb-5" style="max-width: 800px">
+    <div class="row g-0">
+      <div class="col-md-4 me-2">
+        <img
+          [src]="testimonial.imageUrl"
+          class="img-fluid rounded-circle"
+          style="width: 210px; height: 210px; object-fit: cover;"
+          [alt]="testimonial.alt"
+        />
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+          <h5 class="card-title">"</h5>
+          <p class="card-text fw-bold" style="color: #555555">
+            {{testimonial.text}}
+          </p>
+          <p class="card-text fw-bold">{{testimonial.name}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
