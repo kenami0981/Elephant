@@ -22,6 +22,8 @@ export class ProductIdResolver implements Resolve<boolean> {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> {
-    return this._setsStateProductContext.setState({{ id : route.params.id }}).pipe(map((_) => true));
+    return this._setsStateProductContext
+      .setState({ id: route.params['id'] })
+      .pipe(map((_) => true));
   }
 }

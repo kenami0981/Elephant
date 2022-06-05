@@ -32,13 +32,6 @@ export class ProductsComponent {
     @Inject(GETS_ALL_PRODUCT_DTO)
     private _getsAllProductDto: GetsAllProductDtoPort,
     @Inject(GETS_ONE_PRODUCT_DTO)
-    private _getsOneProductDto: GetsOneProductDtoPort,
-    // @Inject(SETS_STATE_PRODUCT_CONTEXT)
-    // private _setsStateProductContext: SetsStateProductContextPort
+    private _getsOneProductDto: GetsOneProductDtoPort
   ) {}
-
-//   onProductClicked(id: string): void {
-//     this._setsStateProductContext.setState({ id }).subscribe();
-//     console.log(id);
-//   }
  }
