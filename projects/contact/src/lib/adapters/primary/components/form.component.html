@@ -11,12 +11,12 @@
         <div class="row">
           <div class="col-md-8">
             <form [formGroup]="contact" (ngSubmit)="onContactSubmited(contact)">
-                <input type="text" class="form-control" formControlName="name" placeholder="Name..." /><br />
-                <input class="form-control" formControlName="email" placeholder="E-mail..." /><br />
+                <input required type="text" class="form-control" formControlName="name" placeholder="Name..." /><br />
+                <input required class="form-control" formControlName="email" placeholder="E-mail..." /><br />
               
 
                 <input type="text" class="col-7 form-control" style="width:420px; height: 120px;" formControlName="message" placeholder="message"><br />
-                <input (click)="onContactSubmited(contact)" class="btn btn-primary" type="button" value="Send Message" /><br /><br />
+                <input (click)="onContactSubmited(contact)" class="btn btn-primary" type="button" [disabled]="contact.invalid" value="Send Message" /><br /><br />
               </form>
           </div>
           <div class="col-md-4">

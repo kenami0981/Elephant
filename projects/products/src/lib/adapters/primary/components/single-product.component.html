@@ -1,23 +1,34 @@
-<section class="container py-5">
+<section class="container py-5" *ngIf="product$ | async as product">
   <div class="card mb-3 border-0">
     <div class="row">
       <div class="col">
         <img
-          [src]="(product$ | async)?.imageUrl"
+          [src]="product.imageUrl"
           class="rounded-start"
           style="width: 550px; height: 685px"
-          [alt]="(product$ | async)?.alt"
+          [alt]="product.alt"
         />
+      </div>
+
+      <div
+        style="width: 70px; height: 70px"
+        class="bg-warning rounded-circle position-absolute top-10 start-0 m-2"
+      >
+        <p class="text-center fw-bold fs-6" style="line-height: 70px">
+          {{ product.discount }}
+        </p>
       </div>
       <div class="col">
         <div class="card-body" style="max-width: 500px">
           <p class="text-uppercase fs-6">
-            home / shop / {{(product$ | async)?.sex}} / <span class="fw-bold">shop</span>
+            home / shop / {{ product.sex }} / <span class="fw-bold">shop</span>
           </p>
-          <h3 class="card-title fw-bold">{{(product$ | async)?.name}}</h3>
+          <h3 class="card-title fw-bold">{{ product.name }}</h3>
           <div class="d-flex">
-            <p class="me-3 text-muted text-decoration-line-through">$69.00</p>
-            <p class="text-primary">{{(product$ | async)?.currency}}{{(product$ | async)?.price}}</p>
+            <p class="me-3 text-muted text-decoration-line-through">
+              {{ product.discountPrice }}
+            </p>
+            <p class="text-primary">{{ (product$ | async)?.price }}</p>
           </div>
           <p class="card-text">
             A classic t-shirt never goes out of style. This is our most premium
@@ -35,39 +46,40 @@
               Select size
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Small</a></li>
-              <li><a class="dropdown-item" href="#">Medium</a></li>
-              <li><a class="dropdown-item" href="#">Large</a></li>
-              <li><a class="dropdown-item" href="#">Extra Large</a></li>
+              <li><a class="dropdown-item">Small</a></li>
+              <li><a class="dropdown-item">Medium</a></li>
+              <li><a class="dropdown-item">Large</a></li>
+              <li><a class="dropdown-item">Extra Large</a></li>
             </ul>
           </div>
-          <button
-            class="mt-4 text-uppercase bg-primary text-white border-0 px-4 py-2"
-          >
+          <div id="liveAlertPlaceholder"></div>
+          <button type="button" class="btn btn-primary text-uppercase px-4 py-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
             add to cart
           </button>
+
           <div class="py-3">
             <p class="fw-bold">
-              Category: <span class="fw-normal">{{(product$ | async)?.sex}}, Polo, Casual</span>
+              Category:
+              <span class="fw-normal">{{ product.sex }}, Polo, Casual</span>
             </p>
             <p class="fw-bold">
-              Tags: <span class="fw-normal">Modern, Deign, cotton</span>
+              Tags: <span class="fw-normal">Modern, Design, cotton</span>
             </p>
           </div>
           <div class="d-flex">
             <div
               style="width: 32px; height: 32px"
-              class="rounded-circle me-2 bg-secondary"
+              class="rounded-circle me-2 bg-info"
               type="button"
             ></div>
             <div
               style="width: 32px; height: 32px"
-              class="rounded-circle me-2 bg-secondary"
+              class="rounded-circle me-2 bg-success"
               type="button"
             ></div>
             <div
               style="width: 32px; height: 32px"
-              class="rounded-circle me-2 bg-secondary"
+              class="rounded-circle me-2 bg-warning"
               type="button"
             ></div>
             <div
@@ -150,3 +162,22 @@
     </div>
   </div>
 </section>
+
+
+<!-- Modal Alert -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" >
+      <div class="modal-header d-flex justify-content-center align-items-center">
+        <h3 class="modal-title text-success text-uppercase fw-bold" id="exampleModalLabel">Success!</h3>
+      </div>
+      <div class="modal-body d-flex justify-content-center align-items-center">
+        <h5>Product added to the cart</h5>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-primary py-2 px-3" data-bs-dismiss="modal">OK</button>
+    
+      </div>
+    </div>
+  </div>
+</div>
