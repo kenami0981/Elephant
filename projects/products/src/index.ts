@@ -8,3 +8,4 @@ export * from './lib/adapters/secondary/services/firebase-products-header.servic
 export * from './lib/adapters/secondary/storages/in-memory-product-context.storage-module';
 export * from './lib/adapters/primary/resolvers/product-id.resolver';
 export * from './lib/adapters/primary/resolvers/product-id.resolver-module';
+
