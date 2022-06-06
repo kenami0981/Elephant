@@ -19,7 +19,7 @@ const routes: Routes = [{
         loadChildren: () => AboutUsPageModule
       },
   { 
-        path: 'Elephants/product', 
+        path: 'Elephants/product/:productId', 
         loadChildren: () => SingleProductPageModule
       },
   { 

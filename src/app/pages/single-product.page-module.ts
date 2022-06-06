@@ -1,19 +1,34 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
-import { FirebaseFooterBottomServiceModule, FooterBottomComponentModule, FooterComponentModule } from '@footer';
-import { FirebaseProductsServiceModule, InMemoryProductContextStorageModule, SingleProductComponentModule } from '@products';
+import {
+  FirebaseNavigationServiceModule,
+  NavComponentModule,
+} from '@navigation';
+import {
+  FirebaseFooterBottomServiceModule,
+  FooterBottomComponentModule,
+  FooterComponentModule,
+} from '@footer';
+import {
+  FirebaseProductsServiceModule,
+  InMemoryProductContextStorageModule,
+  ProductIdResolver,
+  ProductIdResolverModule,
+  SingleProductComponentModule,
+} from '@products';
 import { SingleProductPage } from './single-product.page';
-
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild([
       {
-        path: ':productId',
+        path: '',
         component: SingleProductPage,
+        resolve: {
+          productId: ProductIdResolver,
+        },
       },
     ]),
     NavComponentModule,
@@ -22,10 +37,11 @@ import { SingleProductPage } from './single-product.page';
     NavComponentModule,
     FooterComponentModule,
     SingleProductComponentModule,
-    FirebaseProductsServiceModule,
     FooterBottomComponentModule,
     FirebaseFooterBottomServiceModule,
-    InMemoryProductContextStorageModule
+    InMemoryProductContextStorageModule,
+    ProductIdResolverModule,
+    FirebaseProductsServiceModule,
   ],
   declarations: [SingleProductPage],
   providers: [],
