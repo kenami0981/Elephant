@@ -2,8 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CartComponentModule } from '@cart';
-import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
-import { FirebaseFooterFormServiceModule, FirebaseFooterIconsServiceModule, FooterBottomComponentModule, FooterComponentModule } from '@footer';
+import { NavComponentModule } from '@navigation';
+import {
+  FirebaseFooterFormServiceModule,
+  FirebaseFooterIconsServiceModule,
+  FooterBottomComponentModule,
+  FooterComponentModule,
+} from '@footer';
 import { CartPage } from './cart.page';
 
 @NgModule({
@@ -19,9 +24,8 @@ import { CartPage } from './cart.page';
     NavComponentModule,
     FooterComponentModule,
     FooterBottomComponentModule,
-    FirebaseNavigationServiceModule,
     FirebaseFooterFormServiceModule,
-    FirebaseFooterIconsServiceModule
+    FirebaseFooterIconsServiceModule,
   ],
   declarations: [CartPage],
   providers: [],
