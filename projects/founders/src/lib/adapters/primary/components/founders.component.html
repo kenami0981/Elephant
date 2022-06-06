@@ -9,11 +9,10 @@
   <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
     <div class="col" *ngFor="let founder of founders$ | async">
       <img
-      style="width: 295px; height: 342px; object-fit: cover"
+      style="width: 295px; height: 342px; object-fit: cover;"
         [src]="founder.imageUrl"
         class="card-img-top"
-        [alt]="founder.name"
-      />
+        [alt]="founder.name"/>
       <div class="card-body">
         <h5 class="card-title fw-bold text-center py-3">{{ founder.name }}</h5>
       </div>

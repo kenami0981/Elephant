@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
+import { NavComponentModule } from '@navigation';
 import { FirebaseFooterBottomServiceModule, FooterBottomComponentModule, FooterComponentModule } from '@footer';
 import { AllProductsComponentModule, FirebaseProductsHeaderServiceModule, FirebaseProductsServiceModule, ProductHeaderComponentModule } from '@products';
 import { AllProductsPage } from './all-products.page';
@@ -14,7 +14,6 @@ import { AllProductsPage } from './all-products.page';
         }
       ]),
   NavComponentModule,
-  FirebaseNavigationServiceModule,
   FooterComponentModule,
   AllProductsComponentModule,
   FirebaseProductsServiceModule,

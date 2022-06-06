@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import {
-  FirebaseNavigationServiceModule,
-  NavComponentModule,
-} from '@navigation';
+import { NavComponentModule } from '@navigation';
 import {
   FirebaseFooterBottomServiceModule,
   FooterBottomComponentModule,
@@ -32,7 +29,6 @@ import { SingleProductPage } from './single-product.page';
       },
     ]),
     NavComponentModule,
-    FirebaseNavigationServiceModule,
     FooterComponentModule,
     NavComponentModule,
     FooterComponentModule,

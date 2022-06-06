@@ -7,7 +7,7 @@ import { SingleProductPageModule } from './pages/single-product.page-module';
 import { AllProductsPageModule } from './pages/all-products.page-module';
 
 const routes: Routes = [{ 
-        path: '', 
+        path: 'home', 
         loadChildren: () => HomePageModule
       },
   { 
