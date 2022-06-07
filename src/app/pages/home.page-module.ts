@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NavComponentModule } from '@navigation';
 import { FooterBottomComponentModule, FooterComponentModule } from '@footer';
-import { FirebaseProductsHeaderServiceModule, FirebaseProductsServiceModule, ProductHeaderComponentModule, ProductsComponentModule, SingleProductComponentModule } from '@products';
+import { FirebaseProductsHeaderServiceModule, FirebaseProductsServiceModule, FirebaseTopProductsServiceModule, ProductHeaderComponentModule, ProductsComponentModule, SingleProductComponentModule, TopProductsComponentModule } from '@products';
 import { BenefitComponentModule } from '@benefit';
 import { PromotionComponentModule } from '@promo';
 import { BestSellingComponentModule, FirebaseBestSellHeadingServiceModule, FirebaseBestSellServiceModule } from '@selling';
@@ -22,6 +22,7 @@ import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/h
     BestSellingComponentModule,
     ProductHeaderComponentModule,
     FooterComponentModule,
+    TopProductsComponentModule,
     RouterModule.forChild([
       {
         path: '',
@@ -30,8 +31,9 @@ import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/h
     ]),
     FirebaseBestSellServiceModule,
     FirebaseBestSellHeadingServiceModule,
-    FirebaseProductsServiceModule,
     FirebaseProductsHeaderServiceModule,
+    FirebaseTopProductsServiceModule,
+    FirebaseProductsServiceModule
 
   ],
   declarations: [HomePage],

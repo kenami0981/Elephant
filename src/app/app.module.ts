@@ -9,7 +9,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { FirebaseNavigationServiceModule, NavComponentModule } from '@navigation';
 import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/hero.component-module';
-import { FirebaseProductsServiceModule } from 'projects/products/src/lib/adapters/secondary/infrastructure/firebase-products.service-module';
+import { FirebaseProductsServiceModule } from 'projects/products/src/lib/adapters/secondary/services/firebase-products.service-module';
 import { FirebaseHeroTextsServiceModule } from 'projects/hero/src/lib/adapters/secondary/infrastructure/firebase-hero-texts.service-module';
 import { FirebaseBenefitsServiceModule } from '@benefit';
 import { FirebasePromotionsServiceModule } from '@promo';
@@ -17,7 +17,8 @@ import { FirebaseTestimonialsServiceModule } from '@testimonials';
 import { FirebaseFoundersServiceModule } from '@founders';
 import { FirebaseFooterBottomServiceModule, FirebaseFooterFormServiceModule, FirebaseFooterIconsServiceModule, FirebaseFooterTextsServiceModule } from '@footer';
 import { FirebaseHeroPhotoServiceModule } from '@about';
-import { FirebaseProductsHeaderServiceModule, InMemoryProductContextStorageModule, SingleProductComponentModule } from '@products';
+import { FirebaseProductsHeaderServiceModule, FirebaseTopProductsServiceModule, InMemoryProductContextStorageModule } from '@products';
+import { FirebaseTopProductsService } from 'projects/products/src/lib/adapters/secondary/services/firebase-top-products.service';
 
 
 
@@ -34,7 +35,6 @@ import { FirebaseProductsHeaderServiceModule, InMemoryProductContextStorageModul
     NavComponentModule,
     FirebaseNavigationServiceModule,
     HeroComponentModule,
-    FirebaseProductsServiceModule,
     FirebaseHeroTextsServiceModule,
     FirebaseBenefitsServiceModule,
     FirebasePromotionsServiceModule,
@@ -46,7 +46,9 @@ import { FirebaseProductsHeaderServiceModule, InMemoryProductContextStorageModul
     FirebaseProductsHeaderServiceModule,
     FirebaseFooterBottomServiceModule,
     FirebaseFooterIconsServiceModule,
-    InMemoryProductContextStorageModule
+    InMemoryProductContextStorageModule,
+    FirebaseProductsServiceModule,
+    FirebaseTopProductsServiceModule
 
 
 
