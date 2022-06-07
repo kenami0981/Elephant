@@ -6,7 +6,6 @@ import { FooterBottomComponentModule, FooterComponentModule } from '@footer';
 import { FirebaseProductsHeaderServiceModule, FirebaseProductsServiceModule, FirebaseTopProductsServiceModule, ProductHeaderComponentModule, ProductsComponentModule, SingleProductComponentModule, TopProductsComponentModule } from '@products';
 import { BenefitComponentModule } from '@benefit';
 import { PromotionComponentModule } from '@promo';
-import { BestSellingComponentModule, FirebaseBestSellHeadingServiceModule, FirebaseBestSellServiceModule } from '@selling';
 import { HomePage } from './home.page';
 import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/hero.component-module';
 
@@ -19,7 +18,6 @@ import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/h
     ProductsComponentModule,
     BenefitComponentModule,
     PromotionComponentModule,
-    BestSellingComponentModule,
     ProductHeaderComponentModule,
     FooterComponentModule,
     TopProductsComponentModule,
@@ -29,8 +27,6 @@ import { HeroComponentModule } from 'projects/hero/src/lib/adapters/primary/ui/h
         component: HomePage,
       },
     ]),
-    FirebaseBestSellServiceModule,
-    FirebaseBestSellHeadingServiceModule,
     FirebaseProductsHeaderServiceModule,
     FirebaseTopProductsServiceModule,
     FirebaseProductsServiceModule

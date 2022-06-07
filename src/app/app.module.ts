@@ -18,7 +18,6 @@ import { FirebaseFoundersServiceModule } from '@founders';
 import { FirebaseFooterBottomServiceModule, FirebaseFooterFormServiceModule, FirebaseFooterIconsServiceModule, FirebaseFooterTextsServiceModule } from '@footer';
 import { FirebaseHeroPhotoServiceModule } from '@about';
 import { FirebaseProductsHeaderServiceModule, FirebaseTopProductsServiceModule, InMemoryProductContextStorageModule } from '@products';
-import { FirebaseTopProductsService } from 'projects/products/src/lib/adapters/secondary/services/firebase-top-products.service';
 
 
 
