@@ -17,21 +17,24 @@ import {
   SelectsProductContextPort,
 } from '../../../application/ports/secondary/context/selects-product.context-port';
 
+
+
 @Component({
   selector: 'lib-single-product',
   templateUrl: './single-product.component.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
+
+
 export class SingleProductComponent {
-  product$: Observable<ProductDTO> = this._selectsProductContext
-    .select()
-    .pipe(
-      switchMap((context) =>
-        this._getsOneProductDto.getOne(context.productId as string)
-      ),
-      tap((data) => console.log(data))
-    );
+  product$: Observable<ProductDTO> = this._selectsProductContext.select().pipe(
+    switchMap((context) =>
+      this._getsOneProductDto.getOne(context.productId as string)
+    ),
+    tap((data) => console.log(data))
+  );
   productId$: Observable<Partial<ProductContext>> =
     this._selectsProductContext.select();
 
@@ -39,7 +42,8 @@ export class SingleProductComponent {
     @Inject(GETS_ONE_PRODUCT_DTO)
     private _getsOneProductDto: GetsOneProductDtoPort,
     @Inject(SELECTS_PRODUCT_CONTEXT)
-    private _selectsProductContext: SelectsProductContextPort
-  ) 
-  {}
+    private _selectsProductContext: SelectsProductContextPort,
+  ) {}
+
 }
+

@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-sm sticky-top navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" style="font-size: xx-large">NorthStar</a>
+    <a class="navbar-brand" style="font-size: xx-large" [routerLink]="['/']"
+    routerLinkActive="router-link-active">NorthStar
+    </a>
     <button
       class="navbar-toggler navbar-toggler-right"
       type="button"
@@ -23,31 +25,31 @@
         <li class="nav-item">
           <a
             class="nav-link"
-            [routerLink]="['/Elephants/contact']"
-            routerLinkActive="router-link-active"
-            >CONTACT US</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
             [routerLink]="['/Elephants/about']"
             routerLinkActive="router-link-active"
           >
             ABOUT
           </a>
         </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/Elephants/contact']"
+            routerLinkActive="router-link-active"
+            >CONTACT US</a
+          >
+        </li>
       </ul>
     </div>
     <div>
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item active me-4">
           <a [routerLink]="['/']" routerLinkActive="router-link-active"
             ><img src="./assets/icon/profile.png" class="icon"
           /></a>
         </li>
         <li class="nav-item active">
-          <a [routerLink]="['/']" routerLinkActive="router-link-active"
+          <a [routerLink]="['/Elephants/cart']" routerLinkActive="router-link-active"
             ><img src="./assets/icon/cart.png" class="icon"
           /></a>
         </li>

@@ -29,7 +29,8 @@
       "@testimonials": ["projects/testimonials/src/index.ts"],
       "@products": ["projects/products/src/index.ts"],
       "@all-products": ["projects/all/products/src/index.ts"],
-      "@about": ["projects/about/src/index.ts"]
+      "@about": ["projects/about/src/index.ts"],
+      "@cart": ["projects/cart/src/index.ts"]
     }
   },
   "angularCompilerOptions": {

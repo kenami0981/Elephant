@@ -11,3 +11,4 @@ export * from './lib/adapters/primary/resolvers/product-id.resolver-module';
 export * from './lib/adapters/primary/components/top-products.component-module';
 export * from './lib/adapters/secondary/services/firebase-top-products.service-module';
 export * from './lib/adapters/secondary/services/firebase-top-products.service-module';
+
