@@ -11,16 +11,19 @@
           class="col d-flex justify-content-center align-items-center"
         >
           <div class="card border-0" style="width: 295px">
+            <a [routerLink]="'/Elephants/product/'+product.id">
             <img
               style="width: 295px; height: 342px; object-fit: cover"
               [src]="product.imageUrl"
               class="card-img-top"
               [alt]="product.alt"
-            />
+              />
+            </a>
             <div class="card-body">
               <h5 class="card-title fw-bold">{{ product.name }}</h5>
               <p class="card-text text-primary">
                 {{ product.price }}
+                {{product.topSeller}}
               </p>
             </div>
           </div>
@@ -37,4 +40,3 @@
 </div>
   </section>
   <ul>
- 
