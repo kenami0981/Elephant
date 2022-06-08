@@ -3,12 +3,11 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable, of, throwError } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { GetsOneTopProductDtoPort } from '../../../application/ports/secondary/dto/gets-one-top-product.dto-port';
-import { GetsAllTopProductDtoPort } from '../../../application/ports/secondary/dto/gets-all-top-product.dto-port';
 import { TopProductDTO } from '../../../application/ports/secondary/dto/top-product.dto';
 
 @Injectable()
 export class FirebaseTopProductsService
-  implements GetsOneTopProductDtoPort, GetsAllTopProductDtoPort
+  implements GetsOneTopProductDtoPort
 {
   constructor(private _client: AngularFirestore) {}
 
@@ -25,9 +24,4 @@ export class FirebaseTopProductsService
       );
   }
 
-  getAll(): Observable<TopProductDTO[]> {
-    return this._client
-      .collection<TopProductDTO>('product-list', (ref) => ref.orderBy('topSeller', 'asc'))
-      .valueChanges({ idField: 'id' });
-  }
 }

@@ -6,6 +6,7 @@ import {
 } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TopProductDTO } from '../../../application/ports/secondary/dto/top-product.dto';
+import { ProductDTO } from '../../../application/ports/secondary/product.dto';
 import {
   GETS_ALL_PRODUCT_DTO,
   GetsAllProductDtoPort,
@@ -15,13 +16,10 @@ import {
   GetsOneProductHeaderDtoPort,
 } from '../../../application/ports/secondary/dto/gets-one-product-header.dto-port';
 import {
-  GETS_ALL_TOP_PRODUCT_DTO,
-  GetsAllTopProductDtoPort,
-} from '../../../application/ports/secondary/dto/gets-all-top-product.dto-port';
-import {
   GETS_ONE_TOP_PRODUCT_DTO,
   GetsOneTopProductDtoPort,
 } from '../../../application/ports/secondary/dto/gets-one-top-product.dto-port';
+import { map } from '@firebase/util';
 
 @Component({
   selector: 'lib-top-products',
@@ -30,18 +28,22 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopProductsComponent {
-  products$: Observable<TopProductDTO[]> = this._getsAllTopProductDto.getAll();
+  topSeller = true;
+
   product$: Observable<TopProductDTO> = this._getsOneTopProductDto.getOne(
     'wLYq7zOK9ULgKdB1QPbt'
   );
+  products$: Observable<ProductDTO[]> = this._getsAllProductDto
+    .getAll()
+    // .pipe(
+    //   map((products) => products.filter((product) => product.topSeller))
+    // );
 
   constructor(
     @Inject(GETS_ALL_PRODUCT_DTO)
     private _getsAllProductDto: GetsAllProductDtoPort,
     @Inject(GETS_ONE_PRODUCT_HEADER_DTO)
     private _getsOneProductHeaderDto: GetsOneProductHeaderDtoPort,
-    @Inject(GETS_ALL_TOP_PRODUCT_DTO)
-    private _getsAllTopProductDto: GetsAllTopProductDtoPort,
     @Inject(GETS_ONE_TOP_PRODUCT_DTO)
     private _getsOneTopProductDto: GetsOneTopProductDtoPort
   ) {}

@@ -17,12 +17,13 @@
               [src]="product.imageUrl"
               class="card-img-top"
               [alt]="product.alt"
-            />
-          </a>
+              />
+            </a>
             <div class="card-body">
               <h5 class="card-title fw-bold">{{ product.name }}</h5>
               <p class="card-text text-primary">
                 {{ product.price }}
+                {{product.topSeller}}
               </p>
             </div>
           </div>
@@ -39,5 +40,3 @@
 </div>
   </section>
   <ul>
- 
-    

@@ -33,3 +33,4 @@ export class FirebaseProductsService
       );
   }
 }
+    // .collection<ProductDTO>('product-list', (ref) => ref.orderBy('topSeller', 'asc'))
