@@ -6,6 +6,7 @@ import { AboutUsPageModule } from './pages/about-us.page-module';
 import { SingleProductPageModule } from './pages/single-product.page-module';
 import { AllProductsPageModule } from './pages/all-products.page-module';
 import { CartPageModule } from './pages/cart.page-module';
+import { ConfirmationPageModule } from './pages/confirmation.page-module';
 
 const routes: Routes = [{ 
         path: 'home', 
@@ -30,7 +31,11 @@ const routes: Routes = [{
    {
         path: 'Elephants/cart', 
         loadChildren: () => CartPageModule
-   }
+   },
+  { 
+        path: 'Elephants/confirmation', 
+        loadChildren: () => ConfirmationPageModule
+      }
 ];
 
 @NgModule({

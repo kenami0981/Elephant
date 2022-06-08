@@ -1,5 +1,8 @@
 <section class="container py-5" *ngIf="product$ | async as product">
   <div class="card mb-3 border-0">
+    <p class="text-uppercase fs-6">
+      home / shop / {{ product.sex }} / <span class="fw-bold">shop</span>
+    </p>
     <div class="row">
       <div class="col">
         <img
