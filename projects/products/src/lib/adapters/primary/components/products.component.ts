@@ -4,7 +4,7 @@ import {
   Inject,
   ViewEncapsulation,
 } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { ProductDTO } from '../../../application/ports/secondary/product.dto';
 import {
   GETS_ALL_PRODUCT_DTO,
@@ -23,7 +23,10 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductsComponent {
-  products$: Observable<ProductDTO[]> = this._getsAllProductDto.getAll();
+  products$: Observable<ProductDTO[]> = this._getsAllProductDto.getAll()
+  .pipe(
+    map((products) => products.filter((product) => !product.topSeller))
+  );
   product$: Observable<ProductDTO> = this._getsOneProductDto.getOne(
     'DBWQYLsxiTsyJF8Di0yM'
   );
