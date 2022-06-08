@@ -27,7 +27,7 @@ export class FirebaseTopProductsService
 
   getAll(): Observable<TopProductDTO[]> {
     return this._client
-      .collection<TopProductDTO>('best-sells')
+      .collection<TopProductDTO>('product-list', (ref) => ref.orderBy('topSeller', 'asc'))
       .valueChanges({ idField: 'id' });
   }
 }

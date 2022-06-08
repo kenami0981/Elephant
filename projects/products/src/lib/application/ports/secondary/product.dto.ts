@@ -9,5 +9,6 @@ export interface ProductDTO {
   readonly id: string;
   readonly routerLink: string;
   readonly sex: string;
+  readonly topSeller: boolean;
 
 }

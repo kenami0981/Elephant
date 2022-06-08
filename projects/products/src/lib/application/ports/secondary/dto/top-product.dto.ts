@@ -6,4 +6,6 @@ export interface TopProductDTO {
   readonly textButton: string;
   readonly name: string;
   readonly alt: string;
+  readonly id: string;
+  readonly discountPrice: string;
 }

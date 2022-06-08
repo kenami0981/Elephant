@@ -7,7 +7,17 @@ import { GETS_ALL_TOP_PRODUCT_DTO } from '../../../application/ports/secondary/d
 @NgModule({
   imports: [AngularFirestoreModule],
   declarations: [],
-  providers: [FirebaseTopProductsService, { provide: GETS_ONE_TOP_PRODUCT_DTO, useExisting: FirebaseTopProductsService }, { provide: GETS_ALL_TOP_PRODUCT_DTO, useExisting: FirebaseTopProductsService }],
+  providers: [
+    FirebaseTopProductsService,
+    {
+      provide: GETS_ONE_TOP_PRODUCT_DTO,
+      useExisting: FirebaseTopProductsService,
+    },
+    {
+      provide: GETS_ALL_TOP_PRODUCT_DTO,
+      useExisting: FirebaseTopProductsService,
+    },
+  ],
   exports: [],
 })
 export class FirebaseTopProductsServiceModule {}
