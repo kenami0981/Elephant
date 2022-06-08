@@ -301,6 +301,22 @@
           }
         }
       }
+    },
+    "confirmation": {
+      "projectType": "library",
+      "root": "projects/confirmation",
+      "sourceRoot": "projects/confirmation/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/confirmation"],
+          "options": {
+            "jestConfig": "projects/confirmation/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
