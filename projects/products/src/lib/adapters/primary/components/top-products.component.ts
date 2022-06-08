@@ -4,7 +4,7 @@ import {
   Inject,
   ViewEncapsulation,
 } from '@angular/core';
-import { Observable } from 'rxjs';
+import { mapTo, Observable } from 'rxjs';
 import { TopProductDTO } from '../../../application/ports/secondary/dto/top-product.dto';
 import { ProductDTO } from '../../../application/ports/secondary/product.dto';
 import {
@@ -19,7 +19,7 @@ import {
   GETS_ONE_TOP_PRODUCT_DTO,
   GetsOneTopProductDtoPort,
 } from '../../../application/ports/secondary/dto/gets-one-top-product.dto-port';
-import { map } from '@firebase/util';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'lib-top-products',
@@ -28,16 +28,16 @@ import { map } from '@firebase/util';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopProductsComponent {
-  topSeller = true;
+  // topSeller = true;
 
   product$: Observable<TopProductDTO> = this._getsOneTopProductDto.getOne(
     'wLYq7zOK9ULgKdB1QPbt'
   );
   products$: Observable<ProductDTO[]> = this._getsAllProductDto
     .getAll()
-    // .pipe(
-    //   map((products) => products.filter((product) => product.topSeller))
-    // );
+    .pipe(
+      map((products) => products.filter((product) => product.topSeller === true ))
+    );
 
   constructor(
     @Inject(GETS_ALL_PRODUCT_DTO)
