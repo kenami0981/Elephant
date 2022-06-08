@@ -28,7 +28,6 @@ import { map } from 'rxjs/operators';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopProductsComponent {
-  // topSeller = true;
 
   product$: Observable<TopProductDTO> = this._getsOneTopProductDto.getOne(
     'wLYq7zOK9ULgKdB1QPbt'
@@ -36,7 +35,7 @@ export class TopProductsComponent {
   products$: Observable<ProductDTO[]> = this._getsAllProductDto
     .getAll()
     .pipe(
-      map((products) => products.filter((product) => product.topSeller === true ))
+      map((products) => products.filter((product) => product.topSeller))
     );
 
   constructor(
