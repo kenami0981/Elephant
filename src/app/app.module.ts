@@ -18,7 +18,7 @@ import { FirebaseFoundersServiceModule } from '@founders';
 import { FirebaseFooterBottomServiceModule, FirebaseFooterFormServiceModule, FirebaseFooterIconsServiceModule, FirebaseFooterTextsServiceModule } from '@footer';
 import { FirebaseHeroPhotoServiceModule } from '@about';
 import { FirebaseProductsHeaderServiceModule, FirebaseTopProductsServiceModule, InMemoryProductContextStorageModule } from '@products';
-
+import { RatingModule } from 'ng-starrating';
 
 
 @NgModule({
@@ -46,7 +46,8 @@ import { FirebaseProductsHeaderServiceModule, FirebaseTopProductsServiceModule, 
     FirebaseFooterIconsServiceModule,
     InMemoryProductContextStorageModule,
     FirebaseProductsServiceModule,
-    FirebaseTopProductsServiceModule
+    FirebaseTopProductsServiceModule,
+    RatingModule,
 
 
 

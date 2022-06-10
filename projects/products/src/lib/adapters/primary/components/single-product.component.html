@@ -27,6 +27,14 @@
             home / shop / {{ product.sex }} / <span class="fw-bold">shop</span>
           </p>
           <h3 class="card-title fw-bold">{{ product.name }}</h3>
+          <star-rating 
+          [value]="5" 
+          [totalstars]="5" 
+          checkedcolor="yellow" 
+          uncheckedcolor="black" 
+          size="24px" 
+          [readonly]="false">
+        </star-rating>
           <div class="d-flex">
             <p class="me-3 text-muted text-decoration-line-through">
               {{ product.discountPrice }}
