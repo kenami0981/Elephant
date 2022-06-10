@@ -25,6 +25,7 @@
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^5.2.0-beta1",
     "font-awesome": "^4.7.0",
+    "ng-starrating": "^1.0.20",
     "ngx-bootstrap": "^8.0.0",
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.4.17",
