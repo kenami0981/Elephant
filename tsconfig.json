@@ -31,7 +31,8 @@
       "@all-products": ["projects/all/products/src/index.ts"],
       "@about": ["projects/about/src/index.ts"],
       "@cart": ["projects/cart/src/index.ts"],
-      "@confirmation": ["projects/confirmation/src/index.ts"]
+      "@confirmation": ["projects/confirmation/src/index.ts"],
+      "@checkout": ["projects/checkout/src/index.ts"]
     }
   },
   "angularCompilerOptions": {
