@@ -3,14 +3,14 @@
   <div class="mx-3 my-3">
    Home/<strong>Checkout</strong>
   </div>
-  <h2>Billing Details</h2>
+  <h2><strong>Billing Details </strong></h2>
 
   <form
     [formGroup]="checkout"
     (ngSubmit)="onCheckoutSubmited(checkout)"
     style="width: 400px"
   >
-    <div>
+    <div class="mt-2">
       <label for="exampleInputFullName" class="form-label">Full Name</label>
       <input
         type="text"
@@ -19,7 +19,7 @@
         placeholder="Full Name"
       />
     </div>
-    <div>
+    <div class="mt-2">
       <label for="exampleInputStreetAddress" class="form-label">
         Street Address</label
       >
@@ -30,7 +30,7 @@
         placeholder="Street Address"
       />
     </div>
-    <div>
+    <div class="mt-2">
       <label for="exampleInputCity" class="form-label"> Town/City</label>
       <input
         type="text"
@@ -39,7 +39,7 @@
         placeholder="City"
       />
     </div>
-    <div>
+    <div class="mt-2">
       <label for="exampleInputPhone" class="form-label"> Phone</label>
       <input
         type="number"
@@ -48,7 +48,7 @@
         placeholder="Phone"
       />
     </div>
-    <div>
+    <div class="mt-2">
       <label for="exampleInputEmialAddress" class="form-label">
         Emial Address</label
       >
@@ -60,7 +60,7 @@
       />
     </div>
     <div style="width: 1300px; margin-top: 10%">
-      <h2>Your order</h2>
+      <h2><strong> Your order </strong></h2>
       <table class="table table-bordered" style="margin-top: 5%">
         <thead>
           <tr>
@@ -91,7 +91,7 @@
           to make alternate arrangements
         </div>
       </div>
-      <input class="mx-3 my-3 btn btn-primary" type="submit" value="Place Order" style="position:relative; left:1155px "/>
+      <input class="mx-3 my-3 btn btn-primary" type="submit" value="Place Order" style="position:relative; left:1155px; background-color: #D6763C; border-color: #D6763C;"/>
     </div>
   </form>
 </div>
