@@ -1,0 +1,97 @@
+
+<div style="margin-left: 6%">
+  <div class="mx-3 my-3">
+   Home/<strong>Checkout</strong>
+  </div>
+  <h2><strong>Billing Details </strong></h2>
+
+  <form
+    [formGroup]="checkout"
+    (ngSubmit)="onCheckoutSubmited(checkout)"
+    style="width: 400px"
+  >
+    <div class="mt-2">
+      <label for="exampleInputFullName" class="form-label">Full Name</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="fullName"
+        placeholder="Full Name"
+      />
+    </div>
+    <div class="mt-2">
+      <label for="exampleInputStreetAddress" class="form-label">
+        Street Address</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        formControlName="streetAddress"
+        placeholder="Street Address"
+      />
+    </div>
+    <div class="mt-2">
+      <label for="exampleInputCity" class="form-label"> Town/City</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="city"
+        placeholder="City"
+      />
+    </div>
+    <div class="mt-2">
+      <label for="exampleInputPhone" class="form-label"> Phone</label>
+      <input
+        type="number"
+        class="form-control"
+        formControlName="phone"
+        placeholder="Phone"
+      />
+    </div>
+    <div class="mt-2">
+      <label for="exampleInputEmialAddress" class="form-label">
+        Emial Address</label
+      >
+      <input
+        type="email"
+        class="form-control"
+        formControlName="emialAddress"
+        placeholder="Emial Address"
+      />
+    </div>
+    <div style="width: 1300px; margin-top: 10%">
+      <h2><strong> Your order </strong></h2>
+      <table class="table table-bordered" style="margin-top: 5%">
+        <thead>
+          <tr>
+            <th style="width: 650px" scope="col">Product</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody table-group-divider>
+          <tr>
+            <td>Plain White Shirt</td>
+            <td>$59.00</td>
+          </tr>
+          <tr>
+            <td>Subtotal</td>
+            <td>$59.00</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><strong>$59.00</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="border: 1px solid LightGray; width: 1300px">
+      <div class="mx-3 my-3" style="border: 1px solid LightGray; width: auto; background-color: WhiteSmoke;">
+        <div class="px-3 my-3">
+          Cash on delivery. Please contact us if you require assistance or wish
+          to make alternate arrangements
+        </div>
+      </div>
+      <input class="mx-3 my-3 btn btn-primary" type="submit" value="Place Order" style="position:relative; left:1155px; background-color: #D6763C; border-color: #D6763C;"/>
+    </div>
+  </form>
+</div>

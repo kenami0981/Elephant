@@ -317,6 +317,22 @@
           }
         }
       }
+    },
+    "checkout": {
+      "projectType": "library",
+      "root": "projects/checkout",
+      "sourceRoot": "projects/checkout/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/checkout"],
+          "options": {
+            "jestConfig": "projects/checkout/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
