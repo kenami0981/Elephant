@@ -47,12 +47,17 @@
         <div class="col py-3 fs-5 fw-bold">$59.00</div>
       </div>
       <div class="pt-5">
-        <button
-          style="background-color: #d6763c; color: white"
-          class="px-3 py-2 text-uppercase border-0"
+        <a
+          [routerLink]="['/Elephants/checkout']"
+          routerLinkActive="router-link-active"
         >
-          Proceed to Checkout
-        </button>
+          <button
+            style="background-color: #d6763c; color: white"
+            class="px-3 py-2 text-uppercase border-0"
+          >
+            Proceed to Checkout
+          </button>
+        </a>
       </div>
     </div>
   </div>

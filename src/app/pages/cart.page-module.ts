@@ -11,6 +11,7 @@ import {
 } from '@footer';
 import { CartPage } from './cart.page';
 
+
 @NgModule({
   imports: [
     CommonModule,

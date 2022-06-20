@@ -1,8 +1,5 @@
-
 <div style="margin-left: 6%">
-  <div class="mx-3 my-3">
-   Home/<strong>Checkout</strong>
-  </div>
+  <div class="mx-3 my-3">Home/<strong>Checkout</strong></div>
   <h2><strong>Billing Details </strong></h2>
 
   <form
@@ -85,13 +82,33 @@
       </table>
     </div>
     <div style="border: 1px solid LightGray; width: 1300px">
-      <div class="mx-3 my-3" style="border: 1px solid LightGray; width: auto; background-color: WhiteSmoke;">
+      <div
+        class="mx-3 my-3"
+        style="
+          border: 1px solid LightGray;
+          width: auto;
+          background-color: WhiteSmoke;
+        "
+      >
         <div class="px-3 my-3">
           Cash on delivery. Please contact us if you require assistance or wish
           to make alternate arrangements
         </div>
       </div>
-      <input class="mx-3 my-3 btn btn-primary" type="submit" value="Place Order" style="position:relative; left:1155px; background-color: #D6763C; border-color: #D6763C;"/>
+      <a  [routerLink]="['/Elephants/confirmation']"
+      routerLinkActive="router-link-active">
+      <input
+        class="mx-3 my-3 btn btn-primary"
+        type="submit"
+        value="Place Order"
+        style="
+          position: relative;
+          left: 1155px;
+          background-color: #d6763c;
+          border-color: #d6763c;
+        "
+      />
+    </a>
     </div>
   </form>
 </div>
